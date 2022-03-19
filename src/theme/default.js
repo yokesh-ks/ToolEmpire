@@ -9,7 +9,7 @@ export default {
   colors: {
     primary1: "#2FA4FF",
     primary2: "#00FFDD",
-    secondary: "#00FFDD",
+    secondary: "#E8FFC2",
     background: "#0E185F",
   },
   // Breakpoints for responsive design
