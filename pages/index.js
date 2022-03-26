@@ -12,9 +12,9 @@ export default function Home() {
   const router = useRouter();
   const [Convertor, setConvertor] = useState("hex2rgba");
   const [toastActive, setToastActive] = useState(false);
-
   useEffect(() => {
-    if (router) {
+    
+    if (router?.query?.CC) {
       setConvertor(router.query.CC);
     }
   }, [router]);
@@ -60,7 +60,7 @@ export default function Home() {
         />
         <ColorHeader />
         <Container>
-          {handleConvertor(Convertor)}{" "}
+          {handleConvertor(Convertor)}
           {toastActive && (
             <Toast toastActive={toastActive} setToastActive={setToastActive} />
           )}
