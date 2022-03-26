@@ -4,12 +4,14 @@ import styled from "styled-components";
 import { BgGradient } from "../src/styles/bgBlur";
 import { Layout } from "../src/Layout/layout";
 import { FontInputBox } from "../src/components/fontinputBox";
+import PxtoRem from "../src/components/pxtorem";
 
 export default function Home() {
   const [maxScreenSize, setMaxScreenSize] = useState(1000);
   const [minScreenSize, setMinScreenSize] = useState(700);
   const [maxFontSize, setMaxFontSize] = useState(40);
   const [minFontSize, setMinFontSize] = useState(24);
+  const [fontOpener, setFontOpener] = useState(false);
   const [clamp, setClamp] = useState("");
 
   useEffect(() => {
@@ -52,6 +54,7 @@ export default function Home() {
           color="#9758a4"
           style={{ bottom: 0, right: -250 }}
         />
+        <PxtoRem fontOpener={fontOpener} setFontOpener={setFontOpener}/>
         <Container maxWidth="600px">
           <Title>Responsive Font Calculator</Title>
 
