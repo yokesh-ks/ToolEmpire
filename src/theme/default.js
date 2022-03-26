@@ -10,7 +10,7 @@ export default {
     primary1: "rgb(79, 191, 199)",
     primary2: "#00FFDD",
     secondary: "#E8FFC2",
-    background: "#0d1946",
+    background: "#021540",
   },
   // Breakpoints for responsive design
   breakpoints: {
