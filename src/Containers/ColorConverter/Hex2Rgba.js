@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import { CopyToCLipBoard } from "../../components/CopyToClipBoard";
+import { CopyToCLipBoard } from "../../components/CopyToCLipBoard";
 
 export const Hex2Rgba = (props) => {
   const { setToastActive } = props;
