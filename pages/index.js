@@ -3,11 +3,11 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { BgGradient } from "../src/styles/bgBlur";
 import { Layout } from "../src/Layout/layout";
-import { InputBox } from "../src/components/fontinputBox";
+import { FontInputBox } from "../src/components/fontinputBox";
 
 export default function Home() {
-  const [maxScreenSize, setMaxScreenSize] = useState(700);
-  const [minScreenSize, setMinScreenSize] = useState(1000);
+  const [maxScreenSize, setMaxScreenSize] = useState(1000);
+  const [minScreenSize, setMinScreenSize] = useState(700);
   const [maxFontSize, setMaxFontSize] = useState(40);
   const [minFontSize, setMinFontSize] = useState(24);
   const [clamp, setClamp] = useState("");
@@ -54,31 +54,30 @@ export default function Home() {
         />
         <Container maxWidth="600px">
           <Title>Responsive Font Calculator</Title>
+
           <Row>
             <h3>Minimum size</h3>
-            <InputBox
-              value={maxFontSize}
-              onChange={(e) => setMaxFontSize(e.target.value)}
-            />
-            <p>px at a viewport width of</p>
-            <InputBox
-              value={maxScreenSize}
-              onChange={(e) => setMaxScreenSize(e.target.value)}
-            />
-            <p>px.</p>
-          </Row>
-          <Row>
-            <h3>Maximum size</h3>
-            <InputBox
+            <FontInputBox
               value={minFontSize}
               onChange={(e) => setMinFontSize(e.target.value)}
             />
-            <p>px at a viewport width of</p>
-            <InputBox
+            <p>at a viewport width of</p>
+            <FontInputBox
               value={minScreenSize}
               onChange={(e) => setMinScreenSize(e.target.value)}
             />
-            <p>px.</p>
+          </Row>
+          <Row>
+            <h3>Maximum size</h3>
+            <FontInputBox
+              value={maxFontSize}
+              onChange={(e) => setMaxFontSize(e.target.value)}
+            />
+            <p>at a viewport width of</p>
+            <FontInputBox
+              value={maxScreenSize}
+              onChange={(e) => setMaxScreenSize(e.target.value)}
+            />
           </Row>
           <Result>
             <ResultText>{clamp}</ResultText>
