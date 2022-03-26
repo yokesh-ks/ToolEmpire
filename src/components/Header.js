@@ -23,6 +23,7 @@ function Header() {
 const NavBar = styled.div`
   position: absolute;
   background: rgba(35, 60, 115, 0.3);
+  border-bottom: 2px solid rgba(35, 60, 115, 0.8);
   height: 70px;
   width: 100vw;
   top: 0;
