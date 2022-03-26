@@ -5,6 +5,8 @@ import { BgGradient } from "../src/styles/bgBlur";
 import { Layout } from "../src/Layout/layout";
 import { FontInputBox } from "../src/components/fontinputBox";
 import PxtoRem from "../src/components/pxtorem";
+import { CopyToCLipBoard } from "../src/components/CopyToCLipBoard";
+import { Toast } from "../src/components/Toast";
 
 export default function Home() {
   const [maxScreenSize, setMaxScreenSize] = useState(1000);
@@ -12,6 +14,7 @@ export default function Home() {
   const [maxFontSize, setMaxFontSize] = useState(40);
   const [minFontSize, setMinFontSize] = useState(24);
   const [fontOpener, setFontOpener] = useState(false);
+  const [toastActive, setToastActive] = useState(false);
   const [clamp, setClamp] = useState("");
 
   useEffect(() => {
@@ -28,6 +31,7 @@ export default function Home() {
 
   const handleCopy = () => {
     navigator.clipboard.writeText(clamp);
+    setToastActive(true);
   };
   return (
     <div>
@@ -54,7 +58,7 @@ export default function Home() {
           color="#9758a4"
           style={{ bottom: 0, right: -250 }}
         />
-        <PxtoRem fontOpener={fontOpener} setFontOpener={setFontOpener}/>
+        <PxtoRem fontOpener={fontOpener} setFontOpener={setFontOpener} setToastActive={setToastActive}/>
         <Container maxWidth="600px">
           <Title>Responsive Font Calculator</Title>
 
@@ -84,28 +88,16 @@ export default function Home() {
           </Row>
           <Result>
             <ResultText>{clamp}</ResultText>
-            <button onClick={handleCopy}>
-              <ClipBoardIcon />
-            </button>
+            <CopyToCLipBoard onClick={handleCopy} />
           </Result>
+          {toastActive && (
+            <Toast toastActive={toastActive} setToastActive={setToastActive} />
+          )}
         </Container>
       </Layout>
     </div>
   );
 }
-
-const ClipBoardIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="16"
-    height="16"
-    fill="#2FA4FF"
-    viewBox="0 0 16 16"
-  >
-    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
-    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
-  </svg>
-);
 
 const Container = styled.div`
   position: relative;
