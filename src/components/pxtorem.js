@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { CopyToCLipBoard } from "./CopyToCLipBoard";
 
 function PxtoRem(props) {
-  const { fontOpener, setFontOpener } = props;
+  const { fontOpener, setFontOpener, setToastActive } = props;
   const [pxtorem, setPxtorem] = useState(true);
   const [pxValue, setPxValue] = useState(16);
   const [remValue, setRemValue] = useState(1);
@@ -17,6 +18,16 @@ function PxtoRem(props) {
     setPxValue(e.target.value * 16);
   };
 
+  const handlepxCopy = () => {
+    navigator.clipboard.writeText(pxValue);
+    setToastActive(true);
+  };
+
+  const handleremCopy = () => {
+    navigator.clipboard.writeText(remValue);
+    setToastActive(true);
+  };
+
   return (
     <FloatingBox fontOpener={fontOpener}>
       {pxtorem ? (
@@ -28,11 +39,13 @@ function PxtoRem(props) {
           <InputContain>
             <InputBox value={pxValue} onChange={handlePxValue} />
             <Text>px</Text>
+            <CopyToCLipBoard onClick={handlepxCopy} />
           </InputContain>
           <Arrow onClick={() => setPxtorem(!pxtorem)}>&#10607;</Arrow>
           <InputContain>
             <InputBox value={remValue} onChange={handleRemValue} />
             <Text>rem</Text>
+            <CopyToCLipBoard onClick={handleremCopy} />
           </InputContain>
         </Column>
       ) : (
@@ -44,11 +57,13 @@ function PxtoRem(props) {
           <InputContain>
             <InputBox value={remValue} onChange={handleRemValue} />
             <Text>rem</Text>
+            <CopyToCLipBoard onClick={handleremCopy} />
           </InputContain>
           <Arrow onClick={() => setPxtorem(!pxtorem)}>&#10607;</Arrow>
           <InputContain>
             <InputBox value={pxValue} onChange={handlePxValue} />
             <Text>px</Text>
+            <CopyToCLipBoard onClick={handlepxCopy} />
           </InputContain>
         </Column>
       )}
@@ -113,6 +128,7 @@ const InputContain = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0 8px;
+  gap: 8px;
 `;
 
 const Arrow = styled.button`
