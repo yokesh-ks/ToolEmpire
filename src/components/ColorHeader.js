@@ -9,18 +9,18 @@ export const ColorHeader = () => {
     <NavBar>
       <Container>
         <NavBarContain>
-          <h3>Color Convertor</h3>
+          {/* <h3>Color Convertor</h3> */}
           <NavMenu>
-            <MenuItem onClick={() => router.push(`/?CC=hex2rgba`)}>
+            <MenuItem onClick={() => router.push(`/color-convertor/?CC=hex2rgba`)}>
               Hex to RGBA
             </MenuItem>
-            <MenuItem onClick={() => router.push(`/?CC=rgba2hex`)}>
+            <MenuItem onClick={() => router.push(`/color-convertor/?CC=rgba2hex`)}>
               RGBA to Hex
             </MenuItem>
-            <MenuItem onClick={() => router.push(`/?CC=random`)}>
+            <MenuItem onClick={() => router.push(`/color-convertor/?CC=random`)}>
               Random Color Generator
             </MenuItem>
-            <MenuItem onClick={() => router.push(`/?CC=hex2rgb`)}>
+            <MenuItem onClick={() => router.push(`/color-convertor/?CC=hex2rgb`)}>
               Hex to RGB
             </MenuItem>
           </NavMenu>
@@ -43,7 +43,7 @@ const NavBarContain = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 100%;
 
   h3 {
@@ -63,5 +63,5 @@ const NavMenu = styled.div`
 
 const MenuItem = styled.p`
   color: white;
-  font-size: 12px;
+  font-size: 16px;
 `;

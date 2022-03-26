@@ -8,8 +8,13 @@ function Header() {
     <NavBar>
       <Container>
         <NavBarContain>
-          <Logo>My Tools</Logo>
+          <Link href="/" passHref>
+            <Logo>My Tools</Logo>
+          </Link>
+
           <NavMenu>
+            <Link href="/responsive-font">Responsive Font</Link>
+            <Link href="/color-convertor">Color Convertor</Link>
             <Link href="http://yokesh.in/" passHref>
               <a target="_blank">My Portfolio</a>
             </Link>
@@ -41,6 +46,7 @@ const NavMenu = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 24px;
 `;
 
 const Logo = styled.p`
