@@ -7,10 +7,10 @@ export default {
   },
   // Colors for layout
   colors: {
-    primary1: "#2FA4FF",
+    primary1: "rgb(79, 191, 199)",
     primary2: "#00FFDD",
     secondary: "#E8FFC2",
-    background: "#0E185F",
+    background: "#0d1946",
   },
   // Breakpoints for responsive design
   breakpoints: {
