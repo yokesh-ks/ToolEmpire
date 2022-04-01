@@ -50,7 +50,8 @@ const NavMenu = styled.div`
 `;
 
 const Logo = styled.p`
-  color: white;
+  color: #6EBF8B;
+  font-weight: bold;
   font-size: 18px;
 `;
 
