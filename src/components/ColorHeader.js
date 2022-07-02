@@ -11,16 +11,24 @@ export const ColorHeader = () => {
         <NavBarContain>
           {/* <h3>Color Convertor</h3> */}
           <NavMenu>
-            <MenuItem onClick={() => router.push(`/color-convertor/?CC=hex2rgba`)}>
+            <MenuItem
+              onClick={() => router.push(`/color-convertor/?CC=hex2rgba`)}
+            >
               Hex to RGBA
             </MenuItem>
-            <MenuItem onClick={() => router.push(`/color-convertor/?CC=rgba2hex`)}>
+            <MenuItem
+              onClick={() => router.push(`/color-convertor/?CC=rgba2hex`)}
+            >
               RGBA to Hex
             </MenuItem>
-            <MenuItem onClick={() => router.push(`/color-convertor/?CC=random`)}>
+            <MenuItem
+              onClick={() => router.push(`/color-convertor/?CC=random`)}
+            >
               Random Color Generator
             </MenuItem>
-            <MenuItem onClick={() => router.push(`/color-convertor/?CC=hex2rgb`)}>
+            <MenuItem
+              onClick={() => router.push(`/color-convertor/?CC=hex2rgb`)}
+            >
               Hex to RGB
             </MenuItem>
           </NavMenu>

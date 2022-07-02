@@ -18,6 +18,6 @@ export default {
     md: "(min-width: 768px)",
     lg: "(min-width: 993px)",
     xl: "(min-width: 1200px)",
-    xxl: "(min-width: 1440px)"
+    xxl: "(min-width: 1440px)",
   },
 };

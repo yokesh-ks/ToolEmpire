@@ -26,7 +26,7 @@ const InputContain = styled.div`
 
 const Text = styled.p`
   color: #fff;
-`
+`;
 
 const InputBox = styled.input.attrs((props) => ({
   // we can define static props
