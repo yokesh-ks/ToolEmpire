@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Container } from "../Layout/LayoutStyles";
 import Link from "next/link";
+import Image from "next/image";
 
 function Header() {
   return (
@@ -9,7 +10,9 @@ function Header() {
       <Container>
         <NavBarContain>
           <Link href="/" passHref>
-            <Logo>My Tools</Logo>
+            <ImageContainer>
+              <Image layout="fill" src="/logo2.png" alt="logo" objectFit="contain"/>
+            </ImageContainer>
           </Link>
 
           <NavMenu>
@@ -53,6 +56,13 @@ const Logo = styled.p`
   color: #6ebf8b;
   font-weight: bold;
   font-size: 18px;
+`;
+
+const ImageContainer = styled.div`
+  position: relative;
+  height: 220px;
+  width: 300px;
+  cursor: pointer;
 `;
 
 export default Header;

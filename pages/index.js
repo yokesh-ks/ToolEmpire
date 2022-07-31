@@ -11,7 +11,6 @@ function index() {
       <Head>
         <title>Yokesh Tools</title>
         <meta name="description" content="Tools" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
         <BgGradient size="300px" color="#9758a4" style={{ top: -200 }} />
