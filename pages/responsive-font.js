@@ -37,7 +37,34 @@ export default function Home() {
     <div>
       <Head>
         <title>Yokesh Tools</title>
-        <meta name="description" content="Tools" />
+        <meta
+          name="description"
+          content="An online tool to generate a fluid-responsive property. It generates font size variables for a fluid type scale with CSS clamp."
+        />
+        <meta
+          property="og:url"
+          content="https://yokesh-mytools.vercel.app/responsive-font"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Yokesh Tools" />
+        <meta
+          property="og:description"
+          content="An online tool to generate a fluid-responsive property. It generates font size variables for a fluid type scale with CSS clamp."
+        />
+        <meta property="og:image" content="/fontimage.png" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="yokesh-mytools.vercel.app" />
+        <meta
+          property="twitter:url"
+          content="https://yokesh-mytools.vercel.app/responsive-font"
+        />
+        <meta name="twitter:title" content="Yokesh Tools" />
+        <meta
+          name="twitter:description"
+          content="An online tool to generate a fluid-responsive property. It generates font size variables for a fluid type scale with CSS clamp."
+        />
+        <meta name="twitter:image" content="/fontimage.png" />
       </Head>
       <Layout>
         <BgGradient size="300px" color="#9758a4" style={{ top: -200 }} />
