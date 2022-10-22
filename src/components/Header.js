@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { Container } from "../Layout/LayoutStyles";
+import { Container } from "@uimakers/tools-ui";
 import Link from "next/link";
 import Image from "next/image";
 
-function Header() {
+const Header = () => {
   return (
     <NavBar>
       <Container>

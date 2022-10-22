@@ -9,8 +9,6 @@ export const BgGradient = styled.div`
     border-radius: 50%;
     filter: blur(100px);
     z-index: -10;
-
-    
 `}
 `;
 

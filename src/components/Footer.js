@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-function Footer() {
+const Footer = () => {
   return (
     <FooterContainer>
       <FooterText>
@@ -10,6 +10,8 @@ function Footer() {
     </FooterContainer>
   );
 }
+
+export default Footer
 
 const FooterContainer = styled.div`
   position: absolute;
@@ -31,5 +33,3 @@ const FooterText = styled.p`
     color: red;
   }
 `;
-
-export default Footer;

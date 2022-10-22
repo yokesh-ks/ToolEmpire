@@ -3,10 +3,12 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { BgGradient } from "../src/styles/bgBlur";
 import { Layout } from "../src/Layout/layout";
-import { FontInputBox } from "../src/components/fontinputBox";
-import PxtoRem from "../src/components/pxtorem";
-import { CopyToCLipBoard } from "../src/components/CopyToCLipBoard";
-import { Toast } from "../src/components/Toast";
+import {
+  CopyToCLipBoard,
+  FontInputBox,
+  PxtoRem,
+  Toast,
+} from "../src/components";
 
 export default function Home() {
   const [maxScreenSize, setMaxScreenSize] = useState(1000);

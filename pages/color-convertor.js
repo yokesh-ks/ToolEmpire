@@ -1,11 +1,10 @@
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { Layout } from "../src/Layout/layout";
-import { ColorHeader } from "../src/components/ColorHeader";
 import { useRouter } from "next/router";
-import { Hex2Rgba } from "../src/Containers/ColorConverter/Hex2Rgba";
-import { Toast } from "../src/components/Toast";
+import { Hex2Rgba } from "../src/Containers";
+import { Toast, ColorHeader } from "../src/components";
+import { Layout } from "../src/Layout/layout";
 import { BgGradient } from "../src/styles/bgBlur";
 
 export default function Home() {

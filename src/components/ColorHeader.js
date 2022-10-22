@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Container } from "../Layout/LayoutStyles";
+import { Container } from "@uimakers/tools-ui";
 import { useRouter } from "next/router";
-
-export const ColorHeader = () => {
+const ColorHeader = () => {
   const router = useRouter();
   return (
     <NavBar>
@@ -37,6 +36,8 @@ export const ColorHeader = () => {
     </NavBar>
   );
 };
+
+export default ColorHeader
 
 const NavBar = styled.div`
   position: absolute;

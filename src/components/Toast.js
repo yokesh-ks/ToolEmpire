@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-
-export const Toast = (props) => {
+const Toast = (props) => {
   const { setToastActive, toastActive } = props;
 
   useEffect(() => {
@@ -25,6 +24,8 @@ export const Toast = (props) => {
     </NotificationContainer>
   );
 };
+
+export default Toast;
 
 const NotificationContainer = styled.div`
   font-size: 14px;

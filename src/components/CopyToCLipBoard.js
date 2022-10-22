@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-export const CopyToCLipBoard = (props) => {
+const CopyToCLipBoard = (props) => {
   const { onClick } = props;
   return (
     <CopyButton onClick={onClick}>
@@ -9,6 +9,8 @@ export const CopyToCLipBoard = (props) => {
     </CopyButton>
   );
 };
+
+export default CopyToCLipBoard
 
 const CopyButton = styled.button`
   width: 32px;

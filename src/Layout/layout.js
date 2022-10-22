@@ -1,8 +1,7 @@
 import React from "react";
 
-import { Container } from "./LayoutStyles";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+import { Container } from "@uimakers/tools-ui";
+import { Footer, Header } from "../components";
 export const Layout = ({ children }) => {
   return (
     <Container>

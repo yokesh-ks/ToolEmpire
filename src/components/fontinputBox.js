@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import React from "react";
 
-export const FontInputBox = (props) => {
+const FontInputBox = (props) => {
   const { value, onChange } = props;
   return (
     <InputContain>

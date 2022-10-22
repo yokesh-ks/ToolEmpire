@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import { CopyToCLipBoard } from "../../components/CopyToCLipBoard";
+import { CopyToCLipBoard } from "../../components";
 
-export const Hex2Rgba = (props) => {
+const Hex2Rgba = (props) => {
   const { setToastActive } = props;
   const [value, setValue] = React.useState("#4D96FF");
   const [result, setResult] = React.useState("");
@@ -53,6 +53,8 @@ export const Hex2Rgba = (props) => {
     </WrapperContainer>
   );
 };
+
+export default Hex2Rgba
 
 const WrapperContainer = styled.div`
   display: flex;

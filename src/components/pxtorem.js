@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { CopyToCLipBoard } from "./CopyToCLipBoard";
+import CopyToCLipBoard from "./CopyToCLipBoard";
 
-function PxtoRem(props) {
+const PxtoRem = (props) => {
   const { fontOpener, setFontOpener, setToastActive } = props;
   const [pxtorem, setPxtorem] = useState(true);
   const [pxValue, setPxValue] = useState(16);
@@ -69,7 +69,7 @@ function PxtoRem(props) {
       )}
     </FloatingBox>
   );
-}
+};
 
 const Button = styled.button`
   position: absolute;
