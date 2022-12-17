@@ -24,7 +24,7 @@ function index() {
               <h4>Color Magic</h4>
               <p>Convert Colors with Ease</p>
 
-              <Button>View Tool</Button>
+              <button>View Tool</button>
             </Card>
             <Card
               style={{ marginTop: 20 }}
@@ -34,7 +34,7 @@ function index() {
             >
               <h4>Fontwise</h4>
               <p>The Responsive Font Calculator for Modern Web Design</p>
-              <Button>View Tool</Button>
+              <button>View Tool</button>
             </Card>
           </Contents>
 
@@ -54,17 +54,6 @@ function index() {
     </div>
   );
 }
-
-const Button = styled.button`
-  background: transparent;
-  height: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: 1px solid #fff;
-  color: #fff;
-  border-radius: 8px;
-  font-size: 12px;
-`;
 
 const Container = styled.div`
   margin-top: 100px;

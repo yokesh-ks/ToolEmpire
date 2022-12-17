@@ -8,7 +8,8 @@ const Card = styled.div`
   padding-top: 16px;
   padding-bottom: 16px;
   border-radius: 8px;
-
+  transition: background-color 250ms ease-out 0s;
+  cursor: pointer;
   h4 {
     font-size: 24px;
     font-weight: 400;
@@ -23,6 +24,17 @@ const Card = styled.div`
 
   &:hover {
     background: linear-gradient(330deg, #fff59a 20%, #ff6d6d 100%);
+  }
+
+  button {
+    background: transparent;
+    height: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 12px;
   }
 `;
 
