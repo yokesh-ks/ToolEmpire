@@ -15,7 +15,7 @@ export default Footer
 
 const FooterContainer = styled.div`
   position: absolute;
-  background: rgba(35, 60, 115, 0.3);
+  background: #2B2B37;
   height: 60px;
   width: 100vw;
   bottom: 0;

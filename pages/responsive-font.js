@@ -9,6 +9,7 @@ import {
   PxtoRem,
   Toast,
 } from "../src/components";
+import { Clamp } from "../src/utils/clamp";
 
 export default function Home() {
   const [maxScreenSize, setMaxScreenSize] = useState(1000);
@@ -69,30 +70,17 @@ export default function Home() {
         <meta name="twitter:image" content="/fontimage.png" />
       </Head>
       <Layout>
-        <BgGradient size="300px" color="#9758a4" style={{ top: -200 }} />
-        <BgGradient
-          size="400px"
-          color="#3e5eba"
-          style={{ bottom: 100, left: -300 }}
-        />
-        <BgGradient
-          size="400px"
-          color="#3e5eba"
-          style={{ top: -300, right: -300 }}
-        />
-        <BgGradient
-          size="300px"
-          color="#9758a4"
-          style={{ bottom: 0, right: -250 }}
-        />
         <PxtoRem
           fontOpener={fontOpener}
           setFontOpener={setFontOpener}
           setToastActive={setToastActive}
         />
-        <Container maxWidth="600px">
-          <Title>Responsive Font Calculator</Title>
 
+        <Title>FontWise</Title>
+        <Description>
+          The Responsive Font Calculator for Modern Web Design
+        </Description>
+        <Container maxWidth="600px">
           <Row>
             <h3>Minimum size</h3>
             <FontInputBox
@@ -134,15 +122,28 @@ const Container = styled.div`
   position: relative;
   max-width: ${(props) => props.maxWidth || "100%"};
   margin: 0 auto;
-  padding-top: 100px;
   padding-bottom: 100px;
 `;
 
 const Title = styled.h1`
-  font-size: clamp(2.5rem, 3.2vw + 2rem, 4rem);
+  font-size: ${Clamp(36, 20)};
+  font-weight: 400;
   text-align: center;
-  color: rgb(0, 212, 255);
+  color: #fff;
+  padding-top: 100px;
   line-height: 1.2;
+  margin-bottom: 40px;
+`;
+
+const Description = styled.h1`
+  font-size: ${Clamp(60, 32)};
+  font-weight: 400;
+  text-align: center;
+  color: #fff;
+  max-width: 720px;
+  width: "100%";
+  line-height: 1.2;
+  margin: auto;
   margin-bottom: 100px;
 `;
 
@@ -152,6 +153,14 @@ const Row = styled.div`
   align-items: center;
   gap: 20px;
   margin-bottom: 20px;
+
+  h3 {
+    color: #fff;
+  }
+
+  p {
+    color: #fff;
+  }
 `;
 
 const ResultText = styled.p`

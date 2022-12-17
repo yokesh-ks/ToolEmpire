@@ -2,10 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { Layout } from "../src/Layout/layout";
 import Head from "next/head";
-import Image from "next/image";
-import { BgGradient } from "../src/styles/bgBlur";
 import Lottie from "react-lottie-player";
 import rocketData from "../src/animation/lottie-data/rocket.json";
+import Card from "../src/components/Card";
 
 function index() {
   return (
@@ -15,38 +14,31 @@ function index() {
         <meta name="description" content="Tools" />
       </Head>
       <Layout>
-        <BgGradient size="300px" color="#9758a4" style={{ top: -200 }} />
-        <BgGradient
-          size="400px"
-          color="#3e5eba"
-          style={{ bottom: 100, left: -300 }}
-        />
-        <BgGradient
-          size="400px"
-          color="#3e5eba"
-          style={{ top: -300, right: -300 }}
-        />
-        <BgGradient
-          size="300px"
-          color="#9758a4"
-          style={{ bottom: 0, right: -250 }}
-        />
         <Container>
           <Contents>
-            <h1>Hello </h1>
-            <h1>Home Page is Under Construction </h1>
-            <h1>Will be Available Soon </h1>
-            <h3>Please Visit Color-convertor or responsive font</h3>
-            <h3>Click on Header to navigate to respective Page</h3>
+            <Card
+              onClick={() => {
+                window.open(`color-convertor`, "_self");
+              }}
+            >
+              <h4>Color Magic</h4>
+              <p>Convert Colors with Ease</p>
+
+              <Button>View Tool</Button>
+            </Card>
+            <Card
+              style={{ marginTop: 20 }}
+              onClick={() => {
+                window.open(`responsive-font`, "_self");
+              }}
+            >
+              <h4>Fontwise</h4>
+              <p>The Responsive Font Calculator for Modern Web Design</p>
+              <Button>View Tool</Button>
+            </Card>
           </Contents>
 
           <ImageContainer>
-            {/* <Image
-              src="/construction.png"
-              layout="fill"
-              alt="Site is Under Contruction"
-              objectFit="contain"
-            /> */}
             <Lottie
               animationData={rocketData}
               play
@@ -62,6 +54,17 @@ function index() {
     </div>
   );
 }
+
+const Button = styled.button`
+  background: transparent;
+  height: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 12px;
+`;
 
 const Container = styled.div`
   margin-top: 100px;

@@ -74,8 +74,8 @@ const PxtoRem = (props) => {
 const Button = styled.button`
   position: absolute;
   background: #3e5eba;
-  background-image: linear-gradient(90deg, #3e5eba, #1a2e69, #4e306b);
-  color: #fff;
+  background-image: linear-gradient(330deg, #fff59a 20%, #ff6d6d 100%);
+  color: #1b1a22;
   border: none;
   border-radius: 6px;
   font-size: 1em;
@@ -90,7 +90,7 @@ const Button = styled.button`
   transition-timing-function: ease;
 
   &:hover {
-    background-image: linear-gradient(90deg, #4e306b, #3e5eba, #1a2e69);
+    background-image: linear-gradient(150deg, #569aff 10.21%, #88dfab 84.57%);
   }
 `;
 
@@ -98,7 +98,7 @@ const FloatingBox = styled.div`
   position: absolute;
   width: 280px;
   height: 320px;
-  background: #526099;
+  background: #2B2B37;
   right: ${(props) => (props.fontOpener ? "0" : "-280px")};
   top: 150px;
   color: #fff;

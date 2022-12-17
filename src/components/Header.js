@@ -11,13 +11,18 @@ const Header = () => {
         <NavBarContain>
           <Link href="/" passHref>
             <ImageContainer>
-              <Image layout="fill" src="/logo2.png" alt="logo" objectFit="contain"/>
+              <Image
+                layout="fill"
+                src="/logo2.png"
+                alt="logo"
+                objectFit="contain"
+              />
             </ImageContainer>
           </Link>
 
           <NavMenu>
-            <Link href="/responsive-font">Responsive Font</Link>
-            <Link href="/color-convertor">Color Convertor</Link>
+            <Link href="/responsive-font">Fontwise</Link>
+            <Link href="/color-convertor">Color Magic</Link>
             <Link href="http://yokesh.in/" passHref>
               <a target="_blank">My Portfolio</a>
             </Link>
@@ -26,12 +31,11 @@ const Header = () => {
       </Container>
     </NavBar>
   );
-}
+};
 
 const NavBar = styled.div`
   position: absolute;
-  background: rgba(35, 60, 115, 0.3);
-  border-bottom: 2px solid rgba(35, 60, 115, 0.8);
+  background: #2b2b37;
   height: 70px;
   width: 100vw;
   top: 0;
