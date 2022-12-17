@@ -4,6 +4,8 @@ import { Layout } from "../src/Layout/layout";
 import Head from "next/head";
 import Image from "next/image";
 import { BgGradient } from "../src/styles/bgBlur";
+import Lottie from "react-lottie-player";
+import rocketData from "../src/animation/lottie-data/rocket.json";
 
 function index() {
   return (
@@ -39,11 +41,20 @@ function index() {
           </Contents>
 
           <ImageContainer>
-            <Image
+            {/* <Image
               src="/construction.png"
               layout="fill"
               alt="Site is Under Contruction"
               objectFit="contain"
+            /> */}
+            <Lottie
+              animationData={rocketData}
+              play
+              loop
+              style={{
+                width: "100%",
+                height: "100%",
+              }}
             />
           </ImageContainer>
         </Container>
