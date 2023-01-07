@@ -2,7 +2,7 @@
 export default {
   // Temp fonts
   fonts: {
-    title: "Poppins, sans-serif",
+    title: "Montserrat-Bold, sans-serif",
     main: "Poppins, sans-serif",
   },
   // Colors for layout
@@ -10,7 +10,11 @@ export default {
     primary1: "rgb(79, 191, 199)",
     primary2: "#00FFDD",
     secondary: "#E8FFC2",
-    background: "#1B1A22",
+    background: "#fff",
+    orangeYellow: "#FFC700",
+    reddishOrange: "#F3CEB4",
+    tealightGreen: "#7FBC8C",
+    purpleBlue: "#746BEB",
   },
   // Breakpoints for responsive design
   breakpoints: {

@@ -30,6 +30,17 @@ const GlobalStyles = createGlobalStyle`
   li{
     list-style: none;
   }
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p,
+  figure,
+  picture {
+    margin: 0;
+  }
 `;
 
 export default GlobalStyles;
