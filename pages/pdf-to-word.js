@@ -1,11 +1,56 @@
-import React from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import Head from "next/head";
 import { Container } from "@uimakers/tools-ui";
 import { Icon } from "../src/icons/output";
 import { pdfListData } from "../src/constants";
 import { Card } from "../src/newComponents";
+import PDFParser from "pdf-parser";
 
 const Pdf2Word = () => {
+  const [pdfFile, setPdfFile] = useState(null);
+  const [wordFile, setWordFile] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [progress, setProgress] = useState(0);
+
+  const handleSubmit = useCallback(async () => {
+    if (!pdfFile) return;
+    console.log(pdfFile);
+    setIsLoading(true);
+    const pdfParser = await PDFParser();
+    pdfParser.on("pdfParser_dataError", (errData) =>
+      console.error(errData.parserError)
+    );
+    pdfParser.on("pdfParser_dataReady", (pdfData) => {
+      // Convert pdfData to Word format
+      setWordFile(convertToWord(pdfData));
+      setIsLoading(false);
+    });
+    pdfParser.on("pdfParser_dataProgress", (progressData) => {
+      setProgress(Math.round(progressData.percentage));
+    });
+    pdfParser.parseBuffer(pdfFile);
+    console.log(pdfParser);
+  }, [pdfFile]);
+
+  const handleDragOver = (event) => {
+    event.preventDefault();
+  };
+
+  useEffect(() => {
+    if (!pdfFile) return;
+    handleSubmit();
+  }, [pdfFile]);
+
+  const handleDrop = (event) => {
+    event.preventDefault();
+    setPdfFile(event.dataTransfer.files[0]);
+  };
+
+  const convertToWord = (pdfData) => {
+    // Convert pdfData to Word format
+    return pdfData;
+  };
+
   return (
     <div>
       <Head>
@@ -14,7 +59,24 @@ const Pdf2Word = () => {
       </Head>
       <HeroSection />
       <SecondarySection />
-      <UploadSection />
+
+      {!pdfFile ? (
+        <form
+          onSubmit={handleSubmit}
+          onDragOver={handleDragOver}
+          onDrop={handleDrop}
+        >
+          <UploadSection />
+        </form>
+      ) : null}
+
+      {pdfFile ? (
+        <UploadProcessingSection
+          file={pdfFile}
+          progress={progress}
+          isLoading={isLoading}
+        />
+      ) : null}
       <BenefitsSection />
     </div>
   );
@@ -147,6 +209,64 @@ const UploadSection = () => {
         >
           Upload PDF TO CONVERT
         </button>
+      </Container>
+    </div>
+  );
+};
+
+const UploadProcessingSection = ({ file, progress, isLoading }) => {
+  return (
+    <div
+      style={{
+        backgroundColor: "#0077FF",
+        paddingTop: 108,
+        paddingBottom: 108,
+      }}
+    >
+      <Container
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <h1
+          style={{
+            fontSize: 48,
+            color: "#fff",
+            textAlign: "center",
+            marginBottom: 32,
+          }}
+        >
+          Upload File 1 of 1
+        </h1>
+        <h6
+          style={{
+            fontSize: 24,
+            color: "#fff",
+            textAlign: "center",
+          }}
+        >
+          {file?.name}
+        </h6>
+        <h6
+          style={{
+            fontSize: 24,
+            color: "#fff",
+            textAlign: "center",
+          }}
+        >
+          {progress}
+        </h6>
+        <h6
+          style={{
+            fontSize: 24,
+            color: "#fff",
+            textAlign: "center",
+          }}
+        >
+          {isLoading}
+        </h6>
       </Container>
     </div>
   );

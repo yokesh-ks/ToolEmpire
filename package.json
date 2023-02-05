@@ -21,11 +21,14 @@
     "cz-conventional-changelog": "^3.3.0",
     "framer-motion": "^6.3.16",
     "next": "^12.2.0",
+    "pdf-parser": "^1.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-dropzone": "^14.2.3",
     "react-lottie-player": "^1.5.0",
     "styled-components": "^5.3.5",
-    "styled-normalize": "^8.0.7"
+    "styled-normalize": "^8.0.7",
+    "webpack": "^5.75.0"
   },
   "devDependencies": {
     "@svgr/cli": "^6.5.1",
@@ -42,5 +45,10 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "browser": {
+    "fs": false,
+    "child_process": false,
+    "os": false
   }
 }
