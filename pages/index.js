@@ -18,7 +18,7 @@ function index() {
           <Contents>
             <Card
               onClick={() => {
-                window.open(`color-convertor`, "_self");
+                window.open(`color-magic`, "_self");
               }}
             >
               <h4>Color Magic</h4>
@@ -29,7 +29,7 @@ function index() {
             <Card
               style={{ marginTop: 20 }}
               onClick={() => {
-                window.open(`responsive-font`, "_self");
+                window.open(`font-wise`, "_self");
               }}
             >
               <h4>Fontwise</h4>

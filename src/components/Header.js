@@ -21,8 +21,8 @@ const Header = () => {
           </Link>
 
           <NavMenu>
-            <Link href="/responsive-font">Fontwise</Link>
-            <Link href="/color-convertor">Color Magic</Link>
+            <Link href="/font-wise">Fontwise</Link>
+            <Link href="/color-magic">Color Magic</Link>
             <Link href="http://yokesh.in/" passHref>
               <a target="_blank">My Portfolio</a>
             </Link>
