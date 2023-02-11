@@ -54,7 +54,7 @@ const Pdf2Word = () => {
   return (
     <div>
       <Head>
-        <title>Yokesh Tools</title>
+        <title>ToolEmpire | Pdf2Word</title>
         <meta name="description" content="Tools" />
       </Head>
       <HeroSection />

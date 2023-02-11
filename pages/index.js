@@ -10,7 +10,7 @@ function index() {
   return (
     <div>
       <Head>
-        <title>Yokesh Tools</title>
+        <title>ToolEmpire</title>
         <meta name="description" content="Tools" />
       </Head>
       <Layout>

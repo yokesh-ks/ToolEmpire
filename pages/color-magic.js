@@ -35,7 +35,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Yokesh Tools</title>
+        <title>ToolEmpire | ColorMagic</title>
         <meta name="description" content="Tools" />
       </Head>
       <Layout>

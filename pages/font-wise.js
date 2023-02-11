@@ -40,17 +40,17 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Yokesh Tools</title>
+        <title>ToolEmpire | FontWise</title>
         <meta
           name="description"
           content="An online tool to generate a fluid-responsive property. It generates font size variables for a fluid type scale with CSS clamp."
         />
         <meta
           property="og:url"
-          content="https://yokesh-mytools.vercel.app/responsive-font"
+          content="https://toolempire.vercel.app/font-wise"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Yokesh Tools" />
+        <meta property="og:title" content="ToolEmpire | FontWise" />
         <meta
           property="og:description"
           content="An online tool to generate a fluid-responsive property. It generates font size variables for a fluid type scale with CSS clamp."
@@ -58,12 +58,12 @@ export default function Home() {
         <meta property="og:image" content="/fontimage.png" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="yokesh-mytools.vercel.app" />
+        <meta property="twitter:domain" content="toolempire.vercel.app" />
         <meta
           property="twitter:url"
-          content="https://yokesh-mytools.vercel.app/responsive-font"
+          content="https://toolempire.vercel.app/font-wise"
         />
-        <meta name="twitter:title" content="Yokesh Tools" />
+        <meta name="twitter:title" content="ToolEmpire | FontWise" />
         <meta
           name="twitter:description"
           content="An online tool to generate a fluid-responsive property. It generates font size variables for a fluid type scale with CSS clamp."
