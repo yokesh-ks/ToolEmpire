@@ -9,7 +9,7 @@
     "lint": "next lint",
     "commit": "git-cz",
     "analyze": "ANALYZE=true yarn build",
-    "svgr": "svgr --icon --replace-attr-values '#F2F2F2'={props.color} -d src src/icons/assets --out-dir src/icons/output --index-template icons-template.js"
+    "svgr": "svgr --icon --replace-attr-values '#F2F2F2'={props.color} -d src icons/assets --out-dir icons/output --index-template icons-template.js"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.2.1",

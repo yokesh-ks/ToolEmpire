@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import { CopyToCLipBoard } from "../../components";
+import { Icon } from "../../../icons";
 
 const Hex2Rgba = (props) => {
   const { setToastActive } = props;
@@ -44,7 +44,9 @@ const Hex2Rgba = (props) => {
         <p>CONVERTED</p>
         <ResultText>
           <p>{result}</p>
-          <CopyToCLipBoard onClick={handleCopy} />
+          <div onClick={handleCopy} style={{ cursor: "pointer" }}>
+            <Icon name="CopyLink" width={28} height={28} />
+          </div>
         </ResultText>
         <Divider />
         <p>PREVIEW</p>
@@ -54,7 +56,7 @@ const Hex2Rgba = (props) => {
   );
 };
 
-export default Hex2Rgba
+export default Hex2Rgba;
 
 const WrapperContainer = styled.div`
   display: flex;

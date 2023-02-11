@@ -1,14 +1,10 @@
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import {
-  CopyToCLipBoard,
-  FontInputBox,
-  PxtoRem,
-  Toast,
-} from "../src/components";
+import { FontInputBox, PxtoRem, Toast } from "../src/components";
 import { Clamp } from "../src/utils/clamp";
 import { Container } from "@uimakers/tools-ui";
+import { Icon } from "../icons";
 
 export default function Home() {
   const [maxScreenSize, setMaxScreenSize] = useState(1000);
@@ -140,7 +136,9 @@ export default function Home() {
             </Row>
             <Result>
               <ResultText>{clamp}</ResultText>
-              <CopyToCLipBoard onClick={handleCopy} />
+              <div onClick={handleCopy} style={{ cursor: "pointer" }}>
+                <Icon name="CopyLink" width={28} height={28} />
+              </div>
             </Result>
             {toastActive && (
               <Toast

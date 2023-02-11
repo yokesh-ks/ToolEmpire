@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import CopyToCLipBoard from "./CopyToCLipBoard";
+import { Icon } from "../../icons";
 
 const PxtoRem = (props) => {
-  const { fontOpener, setFontOpener, setToastActive } = props;
   const [pxtorem, setPxtorem] = useState(true);
   const [pxValue, setPxValue] = useState(16);
   const [remValue, setRemValue] = useState(1);
@@ -20,12 +19,10 @@ const PxtoRem = (props) => {
 
   const handlepxCopy = () => {
     navigator.clipboard.writeText(pxValue);
-    setToastActive(true);
   };
 
   const handleremCopy = () => {
     navigator.clipboard.writeText(remValue);
-    setToastActive(true);
   };
 
   return (
@@ -37,13 +34,19 @@ const PxtoRem = (props) => {
             <InputContain>
               <InputBox value={pxValue} onChange={handlePxValue} />
               <Text>px</Text>
-              <CopyToCLipBoard onClick={handlepxCopy} />
+              <div onClick={handlepxCopy} style={{ cursor: "pointer" }}>
+                <Icon name="CopyLink" width={28} height={28} />
+              </div>
             </InputContain>
-            <Arrow onClick={() => setPxtorem(!pxtorem)}>&#10607;</Arrow>
+            <IconButton onClick={() => setPxtorem(!pxtorem)}>
+              <Icon name="SwitchArrow" width={20} height={26} />
+            </IconButton>
             <InputContain>
               <InputBox value={remValue} onChange={handleRemValue} />
               <Text>rem</Text>
-              <CopyToCLipBoard onClick={handleremCopy} />
+              <div onClick={handleremCopy} style={{ cursor: "pointer" }}>
+                <Icon name="CopyLink" width={28} height={28} />
+              </div>
             </InputContain>
           </Column>
         </>
@@ -54,13 +57,19 @@ const PxtoRem = (props) => {
             <InputContain>
               <InputBox value={remValue} onChange={handleRemValue} />
               <Text>rem</Text>
-              <CopyToCLipBoard onClick={handleremCopy} />
+              <div onClick={handleremCopy} style={{ cursor: "pointer" }}>
+                <Icon name="CopyLink" width={28} height={28} />
+              </div>
             </InputContain>
-            <Arrow onClick={() => setPxtorem(!pxtorem)}>&#10607;</Arrow>
+            <IconButton onClick={() => setPxtorem(!pxtorem)}>
+              <Icon name="SwitchArrow" width={20} height={26} />
+            </IconButton>
             <InputContain>
               <InputBox value={pxValue} onChange={handlePxValue} />
               <Text>px</Text>
-              <CopyToCLipBoard onClick={handlepxCopy} />
+              <div onClick={handlepxCopy} style={{ cursor: "pointer" }}>
+                <Icon name="CopyLink" width={28} height={28} />
+              </div>
             </InputContain>
           </Column>
         </>
@@ -118,26 +127,21 @@ const InputContain = styled.div`
   gap: 8px;
 `;
 
-const Arrow = styled.button`
-  font-size: 42px;
-  width: 52px;
-  height: 52px;
-  background: rgba(35, 60, 115, 0.3);
-  border-radius: 50%;
+const Text = styled.h3`
+  color: #000000;
+`;
+
+const IconButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  color: #fff;
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  box-shadow: 2px 2px 0px #000000;
+  border-radius: 2px;
   cursor: pointer;
-
-  &:hover {
-    background: rgba(35, 60, 115, 0.8);
-  }
-`;
-
-const Text = styled.h3`
-  color: #000000;
 `;
 
 const InputBox = styled.input.attrs((props) => ({

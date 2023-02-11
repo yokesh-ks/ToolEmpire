@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 import Head from "next/head";
 import { Container } from "@uimakers/tools-ui";
-import { Icon } from "../src/icons/output";
+import { Icon } from "../icons";
 import { pdfListData } from "../src/constants";
 import { Card } from "../src/newComponents";
 import PDFParser from "pdf-parser";
