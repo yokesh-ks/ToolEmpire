@@ -2,14 +2,11 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Icon } from "../../icons";
 import { Input, IconButton, Row } from "../../components";
+import { copy } from "../../utils";
 
 const Rgba2Hex = () => {
   const [result, setResult] = useState("");
   const [value, setValue] = useState("rgba(0, 255, 117, 1)");
-
-  const handleCopy = (text) => {
-    navigator.clipboard.writeText(text);
-  };
 
   useEffect(() => {
     // Match the RGBA values using a regular expression
@@ -56,7 +53,7 @@ const Rgba2Hex = () => {
             onChange={(e) => setValue(e.target.value)}
           />
           <IconButton
-            onClick={() => handleCopy(value)}
+            onClick={() => copy(value)}
             style={{ cursor: "pointer" }}
           >
             <Icon name="CopyLink" width={28} height={28} />
@@ -67,7 +64,7 @@ const Rgba2Hex = () => {
           <h3 style={{ marginRight: 24, color: "#000000" }}>Hex</h3>
           <Input width="300px" value={result} />
           <IconButton
-            onClick={() => handleCopy(result)}
+            onClick={() => copy(result)}
             style={{ cursor: "pointer" }}
           >
             <Icon name="CopyLink" width={28} height={28} />

@@ -2,14 +2,11 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Icon } from "../../icons";
 import { Input, IconButton, Row } from "../../components";
+import { copy } from "../../utils";
 
 const Random = () => {
   const [result, setResult] = useState("#FFC700");
   const [activeTab, setActiveTab] = useState("Hex");
-
-  const handleCopy = (text) => {
-    navigator.clipboard.writeText(text);
-  };
 
   const handleButtonClick = () => {
     if (activeTab === "Hex") {
@@ -63,7 +60,7 @@ const Random = () => {
           <h3 style={{ marginRight: 24, color: "#000000" }}>{activeTab}</h3>
           <Input width="300px" value={result} />
           <IconButton
-            onClick={() => handleCopy(result)}
+            onClick={() => copy(result)}
             style={{ cursor: "pointer" }}
           >
             <Icon name="CopyLink" width={28} height={28} />

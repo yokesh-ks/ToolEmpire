@@ -2,14 +2,11 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Icon } from "../../icons";
 import { Input, IconButton, Row } from "../../components";
+import { copy } from "../../utils";
 
 const Hex2Rgb = () => {
   const [result, setResult] = useState("");
   const [value, setValue] = useState("#FF5E5E");
-
-  const handleCopy = (text) => {
-    navigator.clipboard.writeText(text);
-  };
 
   useEffect(() => {
     // Remove the "#" symbol from the hex code
@@ -52,7 +49,7 @@ const Hex2Rgb = () => {
             onChange={(e) => setValue(e.target.value)}
           />
           <IconButton
-            onClick={() => handleCopy(value)}
+            onClick={() => copy(value)}
             style={{ cursor: "pointer" }}
           >
             <Icon name="CopyLink" width={28} height={28} />
@@ -63,7 +60,7 @@ const Hex2Rgb = () => {
           <h3 style={{ marginRight: 24, color: "#000000" }}>RGBA</h3>
           <Input width="300px" value={result} />
           <IconButton
-            onClick={() => handleCopy(result)}
+            onClick={() => copy(result)}
             style={{ cursor: "pointer" }}
           >
             <Icon name="CopyLink" width={28} height={28} />

@@ -5,6 +5,7 @@ import { FontInputBox, PxtoRem } from "../src/components";
 import { Clamp } from "../src/utils/clamp";
 import { Icon } from "../icons";
 import { HeroSection } from "../container";
+import { copy } from "../utils";
 
 export default function Home() {
   const [maxScreenSize, setMaxScreenSize] = useState(1000);
@@ -25,9 +26,6 @@ export default function Home() {
     setClamp(output);
   }, [maxScreenSize, minScreenSize, maxFontSize, minFontSize]);
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(clamp);
-  };
   return (
     <div>
       <Head>
@@ -137,7 +135,7 @@ export default function Home() {
             </Row>
             <Result>
               <ResultText>{clamp}</ResultText>
-              <div onClick={handleCopy} style={{ cursor: "pointer" }}>
+              <div onClick={() => copy(clamp)} style={{ cursor: "pointer" }}>
                 <Icon name="CopyLink" width={28} height={28} />
               </div>
             </Result>

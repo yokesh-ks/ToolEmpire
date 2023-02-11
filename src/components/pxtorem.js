@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Icon } from "../../icons";
+import { copy } from "../../utils";
 
 const PxtoRem = (props) => {
   const [pxtorem, setPxtorem] = useState(true);
@@ -17,14 +18,6 @@ const PxtoRem = (props) => {
     setPxValue(e.target.value * 16);
   };
 
-  const handlepxCopy = () => {
-    navigator.clipboard.writeText(pxValue);
-  };
-
-  const handleremCopy = () => {
-    navigator.clipboard.writeText(remValue);
-  };
-
   return (
     <div>
       {pxtorem ? (
@@ -34,7 +27,7 @@ const PxtoRem = (props) => {
             <InputContain>
               <InputBox value={pxValue} onChange={handlePxValue} />
               <Text>px</Text>
-              <div onClick={handlepxCopy} style={{ cursor: "pointer" }}>
+              <div onClick={() => copy(pxValue)} style={{ cursor: "pointer" }}>
                 <Icon name="CopyLink" width={28} height={28} />
               </div>
             </InputContain>
@@ -44,7 +37,7 @@ const PxtoRem = (props) => {
             <InputContain>
               <InputBox value={remValue} onChange={handleRemValue} />
               <Text>rem</Text>
-              <div onClick={handleremCopy} style={{ cursor: "pointer" }}>
+              <div onClick={() => copy(remValue)} style={{ cursor: "pointer" }}>
                 <Icon name="CopyLink" width={28} height={28} />
               </div>
             </InputContain>
@@ -57,7 +50,7 @@ const PxtoRem = (props) => {
             <InputContain>
               <InputBox value={remValue} onChange={handleRemValue} />
               <Text>rem</Text>
-              <div onClick={handleremCopy} style={{ cursor: "pointer" }}>
+              <div onClick={() => copy(remValue)} style={{ cursor: "pointer" }}>
                 <Icon name="CopyLink" width={28} height={28} />
               </div>
             </InputContain>
@@ -67,7 +60,7 @@ const PxtoRem = (props) => {
             <InputContain>
               <InputBox value={pxValue} onChange={handlePxValue} />
               <Text>px</Text>
-              <div onClick={handlepxCopy} style={{ cursor: "pointer" }}>
+              <div onClick={() => copy(pxValue)} style={{ cursor: "pointer" }}>
                 <Icon name="CopyLink" width={28} height={28} />
               </div>
             </InputContain>
