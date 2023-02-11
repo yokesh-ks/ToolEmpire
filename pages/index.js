@@ -1,10 +1,29 @@
 import React from "react";
 import styled from "styled-components";
-import { Layout } from "../src/Layout/layout";
 import Head from "next/head";
-import Lottie from "react-lottie-player";
-import rocketData from "../src/animation/lottie-data/rocket.json";
 import Card from "../src/components/Card";
+import { Container } from "@uimakers/tools-ui";
+
+const data = [
+  {
+    title: "Color Magic",
+    description: "Convert Colors with Ease",
+    iconName: "",
+    routeName: "color-magic",
+  },
+  {
+    title: "FontWise",
+    description: "Responsive Font Calculator for Modern Web Design",
+    iconName: "",
+    routeName: "font-wise",
+  },
+  {
+    title: "PDF to WORD",
+    description: "Transform Your PDFs into Word Docs in a Snap",
+    iconName: "",
+    routeName: "pdf-to-word",
+  },
+];
 
 function index() {
   return (
@@ -13,54 +32,74 @@ function index() {
         <title>ToolEmpire</title>
         <meta name="description" content="Tools" />
       </Head>
-      <Layout>
-        <Container>
-          <Contents>
+      <HeroSection />
+      <Container>
+        <Contents>
+          {data.map((item, index) => (
             <Card
               onClick={() => {
-                window.open(`color-magic`, "_self");
+                window.open(item?.routeName, "_self");
               }}
+              key={index}
             >
-              <h4>Color Magic</h4>
-              <p>Convert Colors with Ease</p>
+              <div style={{ flex: 1, display: "flex", flexDirection: "row" }}>
+                <div
+                  style={{
+                    width: 60,
+                    height: 60,
+                    background: "#D9D9D9",
+                    borderRadius: 40,
+                  }}
+                ></div>
+                <div style={{ flex: 1, marginLeft: 20 }}>
+                  <h4>{item?.title}</h4>
+                  <p>{item?.description}</p>
+                </div>
+              </div>
 
-              <button>View Tool</button>
+              <div style={{ display: "flex", justifyContent: "flex-end" }}>
+                <button>View Tool</button>
+              </div>
             </Card>
-            <Card
-              style={{ marginTop: 20 }}
-              onClick={() => {
-                window.open(`font-wise`, "_self");
-              }}
-            >
-              <h4>Fontwise</h4>
-              <p>The Responsive Font Calculator for Modern Web Design</p>
-              <button>View Tool</button>
-            </Card>
-          </Contents>
-
-          <ImageContainer>
-            <Lottie
-              animationData={rocketData}
-              play
-              loop
-              style={{
-                width: "100%",
-                height: "100%",
-              }}
-            />
-          </ImageContainer>
-        </Container>
-      </Layout>
+          ))}
+        </Contents>
+      </Container>
     </div>
   );
 }
 
-const Container = styled.div`
-  margin-top: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`;
+const HeroSection = () => {
+  return (
+    <div
+      style={{
+        backgroundColor: "#0077FF",
+        paddingTop: 154,
+        paddingBottom: 66,
+      }}
+    >
+      <Container>
+        <h1
+          style={{
+            fontSize: 96,
+            color: "#fff",
+            textAlign: "center",
+          }}
+        >
+          ToolEmpire
+        </h1>
+        <h1
+          style={{
+            fontSize: 64,
+            color: "#fff",
+            textAlign: "center",
+          }}
+        >
+          Innovative tools for empire builders.
+        </h1>
+      </Container>
+    </div>
+  );
+};
 
 const ImageContainer = styled.div`
   position: relative;
@@ -69,6 +108,12 @@ const ImageContainer = styled.div`
 `;
 
 const Contents = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 160px;
+  margin-bottom: 160px;
+  gap: 40px;
+
   h3 {
     color: #fff;
     line-height: 1.5;

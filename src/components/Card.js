@@ -2,39 +2,42 @@ import React from "react";
 import styled from "styled-components";
 
 const Card = styled.div`
-  background: #2b2b37;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  background: #ffffff;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 4px #000000;
   border-radius: 8px;
-  transition: background-color 250ms ease-out 0s;
+  padding: 20px 24px;
   cursor: pointer;
   h4 {
-    font-size: 24px;
-    font-weight: 400;
-    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
   }
 
   p {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    color: #fff;
-  }
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
 
-  &:hover {
-    background: linear-gradient(330deg, #fff59a 20%, #ff6d6d 100%);
+    color: #6e6d7a;
   }
 
   button {
-    background: transparent;
-    height: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border: 1px solid #fff;
-    color: #fff;
-    border-radius: 8px;
     font-size: 12px;
+    padding: 8px 16px;
+    color: #ffffff;
+    width: 100px;
+    height: 31px;
+    background: #0077ff;
+    border: 2px solid #000000;
+    box-shadow: 4px 4px 0px #000000;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 32px;
+    cursor: pointer;
   }
 `;
 
