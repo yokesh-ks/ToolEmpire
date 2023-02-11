@@ -10,6 +10,7 @@ import {
   Toast,
 } from "../src/components";
 import { Clamp } from "../src/utils/clamp";
+import { Container } from "@uimakers/tools-ui";
 
 export default function Home() {
   const [maxScreenSize, setMaxScreenSize] = useState(1000);
@@ -69,61 +70,83 @@ export default function Home() {
         />
         <meta name="twitter:image" content="/fontimage.png" />
       </Head>
-      <Layout>
-        <PxtoRem
-          fontOpener={fontOpener}
-          setFontOpener={setFontOpener}
-          setToastActive={setToastActive}
-        />
 
-        <Title>FontWise</Title>
-        <Description>
-          The Responsive Font Calculator for Modern Web Design
-        </Description>
-        <Container maxWidth="600px">
-          <Row>
-            <h3>Minimum size</h3>
-            <FontInputBox
-              value={minFontSize}
-              onChange={(e) => setMinFontSize(e.target.value)}
-            />
-            <p>at a viewport width of</p>
-            <FontInputBox
-              value={minScreenSize}
-              onChange={(e) => setMinScreenSize(e.target.value)}
-            />
-          </Row>
-          <Row>
-            <h3>Maximum size</h3>
-            <FontInputBox
-              value={maxFontSize}
-              onChange={(e) => setMaxFontSize(e.target.value)}
-            />
-            <p>at a viewport width of</p>
-            <FontInputBox
-              value={maxScreenSize}
-              onChange={(e) => setMaxScreenSize(e.target.value)}
-            />
-          </Row>
-          <Result>
-            <ResultText>{clamp}</ResultText>
-            <CopyToCLipBoard onClick={handleCopy} />
-          </Result>
-          {toastActive && (
-            <Toast toastActive={toastActive} setToastActive={setToastActive} />
-          )}
-        </Container>
-      </Layout>
+      <HeroSection />
+      <PxtoRem
+        fontOpener={fontOpener}
+        setFontOpener={setFontOpener}
+        setToastActive={setToastActive}
+      />
+
+      <Container maxWidth="600px">
+        <Row>
+          <h3>Minimum size</h3>
+          <FontInputBox
+            value={minFontSize}
+            onChange={(e) => setMinFontSize(e.target.value)}
+          />
+          <p>at a viewport width of</p>
+          <FontInputBox
+            value={minScreenSize}
+            onChange={(e) => setMinScreenSize(e.target.value)}
+          />
+        </Row>
+        <Row>
+          <h3>Maximum size</h3>
+          <FontInputBox
+            value={maxFontSize}
+            onChange={(e) => setMaxFontSize(e.target.value)}
+          />
+          <p>at a viewport width of</p>
+          <FontInputBox
+            value={maxScreenSize}
+            onChange={(e) => setMaxScreenSize(e.target.value)}
+          />
+        </Row>
+        <Result>
+          <ResultText>{clamp}</ResultText>
+          <CopyToCLipBoard onClick={handleCopy} />
+        </Result>
+        {toastActive && (
+          <Toast toastActive={toastActive} setToastActive={setToastActive} />
+        )}
+      </Container>
     </div>
   );
 }
 
-const Container = styled.div`
-  position: relative;
-  max-width: ${(props) => props.maxWidth || "100%"};
-  margin: 0 auto;
-  padding-bottom: 100px;
-`;
+const HeroSection = () => {
+  return (
+    <div
+      style={{
+        backgroundColor: "#0077FF",
+        paddingTop: 154,
+        paddingBottom: 66,
+      }}
+    >
+      <Container>
+        <h1
+          style={{
+            fontSize: 96,
+            color: "#fff",
+            textAlign: "center",
+          }}
+        >
+          FontWise
+        </h1>
+        <h1
+          style={{
+            fontSize: 64,
+            color: "#fff",
+            textAlign: "center",
+          }}
+        >
+          Responsive Font Calculator for Modern Web Design
+        </h1>
+      </Container>
+    </div>
+  );
+};
 
 const Title = styled.h1`
   font-size: ${Clamp(36, 20)};
