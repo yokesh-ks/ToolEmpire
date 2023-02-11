@@ -2,7 +2,12 @@
 
 ### Innovative tools for empire builders.
 
-
-
-
 [Live Link](https://toolempire.vercel.app/)
+
+---
+
+### List of Tools
+
+- ColorMagic - Convert Color with Ease
+
+- FontWise - Responsive Font Calculator for Modern Web Design
