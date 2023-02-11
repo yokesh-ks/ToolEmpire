@@ -5,6 +5,7 @@ import { Icon } from "../icons";
 import { pdfListData } from "../src/constants";
 import { Card } from "../src/newComponents";
 import PDFParser from "pdf-parser";
+import { HeroSection } from "../container";
 
 const Pdf2Word = () => {
   const [pdfFile, setPdfFile] = useState(null);
@@ -57,7 +58,10 @@ const Pdf2Word = () => {
         <title>ToolEmpire | Pdf2Word</title>
         <meta name="description" content="Tools" />
       </Head>
-      <HeroSection />
+      <HeroSection
+        title="Pdf2Word"
+        description="Transform Your PDFs into Word Docs in a Snap"
+      />
       <SecondarySection />
 
       {!pdfFile ? (
@@ -78,39 +82,6 @@ const Pdf2Word = () => {
         />
       ) : null}
       <BenefitsSection />
-    </div>
-  );
-};
-
-const HeroSection = () => {
-  return (
-    <div
-      style={{
-        backgroundColor: "#0077FF",
-        paddingTop: 154,
-        paddingBottom: 66,
-      }}
-    >
-      <Container>
-        <h1
-          style={{
-            fontSize: 96,
-            color: "#fff",
-            textAlign: "center",
-          }}
-        >
-          Pdf2Word
-        </h1>
-        <h1
-          style={{
-            fontSize: 64,
-            color: "#fff",
-            textAlign: "center",
-          }}
-        >
-          Transform Your PDFs into Word Docs in a Snap
-        </h1>
-      </Container>
     </div>
   );
 };

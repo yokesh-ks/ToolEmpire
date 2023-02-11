@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Head from "next/head";
 import Card from "../src/components/Card";
 import { Container } from "@uimakers/tools-ui";
+import { HeroSection } from "../container";
 
 const data = [
   {
@@ -32,7 +33,10 @@ function index() {
         <title>ToolEmpire</title>
         <meta name="description" content="Tools" />
       </Head>
-      <HeroSection />
+      <HeroSection
+        title="ToolEmpire"
+        description="Innovative tools for empire builders."
+      />
       <Container>
         <Contents>
           {data.map((item, index) => (
@@ -67,39 +71,6 @@ function index() {
     </div>
   );
 }
-
-const HeroSection = () => {
-  return (
-    <div
-      style={{
-        backgroundColor: "#0077FF",
-        paddingTop: 154,
-        paddingBottom: 66,
-      }}
-    >
-      <Container>
-        <h1
-          style={{
-            fontSize: 96,
-            color: "#fff",
-            textAlign: "center",
-          }}
-        >
-          ToolEmpire
-        </h1>
-        <h1
-          style={{
-            fontSize: 64,
-            color: "#fff",
-            textAlign: "center",
-          }}
-        >
-          Innovative tools for empire builders.
-        </h1>
-      </Container>
-    </div>
-  );
-};
 
 const ImageContainer = styled.div`
   position: relative;

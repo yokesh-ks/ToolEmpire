@@ -4,8 +4,7 @@ import styled from "styled-components";
 import { useRouter } from "next/router";
 import { Hex2Rgba } from "../src/Containers";
 import { Toast, ColorHeader } from "../src/components";
-import { Layout } from "../src/Layout/layout";
-import { BgGradient } from "../src/styles/bgBlur";
+import { HeroSection } from "../container";
 
 export default function Home() {
   const router = useRouter();
@@ -38,15 +37,14 @@ export default function Home() {
         <title>ToolEmpire | ColorMagic</title>
         <meta name="description" content="Tools" />
       </Head>
-      <Layout>
-        <ColorHeader />
-        <Container>
-          {handleConvertor(Convertor)}
-          {toastActive && (
-            <Toast toastActive={toastActive} setToastActive={setToastActive} />
-          )}
-        </Container>
-      </Layout>
+      <HeroSection title="ColorMagic" description="Convert Color with Ease" />
+      {/* <ColorHeader /> */}
+      <Container>
+        {handleConvertor(Convertor)}
+        {toastActive && (
+          <Toast toastActive={toastActive} setToastActive={setToastActive} />
+        )}
+      </Container>
     </div>
   );
 }

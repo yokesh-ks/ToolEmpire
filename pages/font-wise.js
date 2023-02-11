@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { FontInputBox, PxtoRem, Toast } from "../src/components";
 import { Clamp } from "../src/utils/clamp";
-import { Container } from "@uimakers/tools-ui";
 import { Icon } from "../icons";
+import { HeroSection } from "../container";
 
 export default function Home() {
   const [maxScreenSize, setMaxScreenSize] = useState(1000);
@@ -64,7 +64,10 @@ export default function Home() {
         <meta name="twitter:image" content="/fontimage.png" />
       </Head>
 
-      <HeroSection />
+      <HeroSection
+        title="FontWise"
+        description="Responsive Font Calculator for Modern Web Design"
+      />
       <div style={{ display: "flex", height: "100%", width: "100%", flex: 1 }}>
         <div
           style={{
@@ -164,39 +167,6 @@ export default function Home() {
     </div>
   );
 }
-
-const HeroSection = () => {
-  return (
-    <div
-      style={{
-        backgroundColor: "#0077FF",
-        paddingTop: 154,
-        paddingBottom: 66,
-      }}
-    >
-      <Container>
-        <h1
-          style={{
-            fontSize: 96,
-            color: "#fff",
-            textAlign: "center",
-          }}
-        >
-          FontWise
-        </h1>
-        <h1
-          style={{
-            fontSize: 64,
-            color: "#fff",
-            textAlign: "center",
-          }}
-        >
-          Responsive Font Calculator for Modern Web Design
-        </h1>
-      </Container>
-    </div>
-  );
-};
 
 const Title = styled.h1`
   font-size: ${Clamp(36, 20)};
