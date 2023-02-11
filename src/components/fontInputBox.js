@@ -6,7 +6,7 @@ const FontInputBox = (props) => {
   return (
     <InputContain>
       <InputBox value={value} onChange={onChange} />
-      <Text>px</Text>
+      <h3 style={{ color: "#000000" }}>px</h3>
     </InputContain>
   );
 };
@@ -14,18 +14,17 @@ const FontInputBox = (props) => {
 export default FontInputBox;
 
 const InputContain = styled.div`
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: #ffffff;
+  box-shadow: 2px 2px 4px #000000;
   border-radius: 6px;
+  width: 116px;
+  height: 48px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   padding: 0 8px;
-`;
-
-const Text = styled.p`
-  color: #fff;
+  border: 2px solid #000000;
 `;
 
 const InputBox = styled.input.attrs((props) => ({
@@ -35,7 +34,7 @@ const InputBox = styled.input.attrs((props) => ({
   // or we can define dynamic ones
   size: props.size || "1em",
 }))`
-  color: #fff;
+  color: #000000;
   background: transparent;
   outline: none;
   border: none;
@@ -44,4 +43,5 @@ const InputBox = styled.input.attrs((props) => ({
   text-align: center;
   width: 56px;
   height: 28px;
+  font-weight: 700;
 `;

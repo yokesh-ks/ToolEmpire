@@ -29,45 +29,43 @@ const PxtoRem = (props) => {
   };
 
   return (
-    <FloatingBox fontOpener={fontOpener}>
+    <div>
       {pxtorem ? (
-        <Column>
-          <Button onClick={() => setFontOpener(!fontOpener)}>
-            px &harr; rem
-          </Button>
+        <>
           <Title>PX to REM Converter</Title>
-          <InputContain>
-            <InputBox value={pxValue} onChange={handlePxValue} />
-            <Text>px</Text>
-            <CopyToCLipBoard onClick={handlepxCopy} />
-          </InputContain>
-          <Arrow onClick={() => setPxtorem(!pxtorem)}>&#10607;</Arrow>
-          <InputContain>
-            <InputBox value={remValue} onChange={handleRemValue} />
-            <Text>rem</Text>
-            <CopyToCLipBoard onClick={handleremCopy} />
-          </InputContain>
-        </Column>
+          <Column>
+            <InputContain>
+              <InputBox value={pxValue} onChange={handlePxValue} />
+              <Text>px</Text>
+              <CopyToCLipBoard onClick={handlepxCopy} />
+            </InputContain>
+            <Arrow onClick={() => setPxtorem(!pxtorem)}>&#10607;</Arrow>
+            <InputContain>
+              <InputBox value={remValue} onChange={handleRemValue} />
+              <Text>rem</Text>
+              <CopyToCLipBoard onClick={handleremCopy} />
+            </InputContain>
+          </Column>
+        </>
       ) : (
-        <Column>
-          <Button onClick={() => setFontOpener(!fontOpener)}>
-            rem &harr; px
-          </Button>
+        <>
           <Title>REM to PX Converter</Title>
-          <InputContain>
-            <InputBox value={remValue} onChange={handleRemValue} />
-            <Text>rem</Text>
-            <CopyToCLipBoard onClick={handleremCopy} />
-          </InputContain>
-          <Arrow onClick={() => setPxtorem(!pxtorem)}>&#10607;</Arrow>
-          <InputContain>
-            <InputBox value={pxValue} onChange={handlePxValue} />
-            <Text>px</Text>
-            <CopyToCLipBoard onClick={handlepxCopy} />
-          </InputContain>
-        </Column>
+          <Column>
+            <InputContain>
+              <InputBox value={remValue} onChange={handleRemValue} />
+              <Text>rem</Text>
+              <CopyToCLipBoard onClick={handleremCopy} />
+            </InputContain>
+            <Arrow onClick={() => setPxtorem(!pxtorem)}>&#10607;</Arrow>
+            <InputContain>
+              <InputBox value={pxValue} onChange={handlePxValue} />
+              <Text>px</Text>
+              <CopyToCLipBoard onClick={handlepxCopy} />
+            </InputContain>
+          </Column>
+        </>
       )}
-    </FloatingBox>
+    </div>
   );
 };
 
@@ -94,20 +92,6 @@ const Button = styled.button`
   }
 `;
 
-const FloatingBox = styled.div`
-  position: absolute;
-  width: 280px;
-  height: 320px;
-  background: #2B2B37;
-  right: ${(props) => (props.fontOpener ? "0" : "-280px")};
-  top: 150px;
-  color: #fff;
-  z-index: 100;
-  transition: right 0.5s;
-  border-radius: 12px;
-  padding: 16px;
-`;
-
 const Column = styled.div`
   display: flex;
   flex-direction: column;
@@ -115,14 +99,17 @@ const Column = styled.div`
   align-items: center;
 `;
 
-const Title = styled.h1`
+const Title = styled.h3`
   font-size: 20px;
+  color: #000000;
+  margin-bottom: 24px;
 `;
 
 const InputContain = styled.div`
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  border-radius: 12px;
+  background: #ffffff;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 4px #000000;
+  border-radius: 8px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -149,8 +136,8 @@ const Arrow = styled.button`
   }
 `;
 
-const Text = styled.p`
-  color: #fff;
+const Text = styled.h3`
+  color: #000000;
 `;
 
 const InputBox = styled.input.attrs((props) => ({
@@ -160,7 +147,7 @@ const InputBox = styled.input.attrs((props) => ({
   // or we can define dynamic ones
   size: props.size || "1em",
 }))`
-  color: #fff;
+  color: #000000;
   background: transparent;
   outline: none;
   border: none;

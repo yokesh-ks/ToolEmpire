@@ -1,8 +1,6 @@
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { BgGradient } from "../src/styles/bgBlur";
-import { Layout } from "../src/Layout/layout";
 import {
   CopyToCLipBoard,
   FontInputBox,
@@ -17,7 +15,6 @@ export default function Home() {
   const [minScreenSize, setMinScreenSize] = useState(700);
   const [maxFontSize, setMaxFontSize] = useState(40);
   const [minFontSize, setMinFontSize] = useState(24);
-  const [fontOpener, setFontOpener] = useState(false);
   const [toastActive, setToastActive] = useState(false);
   const [clamp, setClamp] = useState("");
 
@@ -72,45 +69,100 @@ export default function Home() {
       </Head>
 
       <HeroSection />
-      <PxtoRem
-        fontOpener={fontOpener}
-        setFontOpener={setFontOpener}
-        setToastActive={setToastActive}
-      />
-
-      <Container maxWidth="600px">
-        <Row>
-          <h3>Minimum size</h3>
-          <FontInputBox
-            value={minFontSize}
-            onChange={(e) => setMinFontSize(e.target.value)}
-          />
-          <p>at a viewport width of</p>
-          <FontInputBox
-            value={minScreenSize}
-            onChange={(e) => setMinScreenSize(e.target.value)}
-          />
-        </Row>
-        <Row>
-          <h3>Maximum size</h3>
-          <FontInputBox
-            value={maxFontSize}
-            onChange={(e) => setMaxFontSize(e.target.value)}
-          />
-          <p>at a viewport width of</p>
-          <FontInputBox
-            value={maxScreenSize}
-            onChange={(e) => setMaxScreenSize(e.target.value)}
-          />
-        </Row>
-        <Result>
-          <ResultText>{clamp}</ResultText>
-          <CopyToCLipBoard onClick={handleCopy} />
-        </Result>
-        {toastActive && (
-          <Toast toastActive={toastActive} setToastActive={setToastActive} />
-        )}
-      </Container>
+      <div style={{ display: "flex", height: "100%", width: "100%", flex: 1 }}>
+        <div
+          style={{
+            background: "#FFB443",
+            width: "100%",
+            height: "100%",
+            flex: 1,
+          }}
+        >
+          <div
+            style={{
+              maxWidth: 800,
+              margin: "auto",
+              paddingTop: 144,
+              paddingBottom: 144,
+            }}
+          >
+            <Row>
+              <h3
+                style={{
+                  fontSize: 24,
+                  color: "#000000",
+                }}
+              >
+                Minimum size
+              </h3>
+              <FontInputBox
+                value={minFontSize}
+                onChange={(e) => setMinFontSize(e.target.value)}
+              />
+              <h3
+                style={{
+                  fontSize: 24,
+                  color: "#000000",
+                }}
+              >
+                at a viewport width of
+              </h3>
+              <FontInputBox
+                value={minScreenSize}
+                onChange={(e) => setMinScreenSize(e.target.value)}
+              />
+            </Row>
+            <Row>
+              <h3
+                style={{
+                  fontSize: 24,
+                  color: "#000000",
+                }}
+              >
+                Maximum size
+              </h3>
+              <FontInputBox
+                value={maxFontSize}
+                onChange={(e) => setMaxFontSize(e.target.value)}
+              />
+              <h3
+                style={{
+                  fontSize: 24,
+                  color: "#000000",
+                }}
+              >
+                at a viewport width of
+              </h3>
+              <FontInputBox
+                value={maxScreenSize}
+                onChange={(e) => setMaxScreenSize(e.target.value)}
+              />
+            </Row>
+            <Result>
+              <ResultText>{clamp}</ResultText>
+              <CopyToCLipBoard onClick={handleCopy} />
+            </Result>
+            {toastActive && (
+              <Toast
+                toastActive={toastActive}
+                setToastActive={setToastActive}
+              />
+            )}
+          </div>
+        </div>
+        <div
+          style={{
+            background: "#DD7DFF",
+            width: 360,
+            paddingLeft: 24,
+            paddingRight: 24,
+            paddingTop: 48,
+            paddingBottom: 48,
+          }}
+        >
+          <PxtoRem />
+        </div>
+      </div>
     </div>
   );
 }
@@ -158,18 +210,6 @@ const Title = styled.h1`
   margin-bottom: 40px;
 `;
 
-const Description = styled.h1`
-  font-size: ${Clamp(60, 32)};
-  font-weight: 400;
-  text-align: center;
-  color: #fff;
-  max-width: 720px;
-  width: "100%";
-  line-height: 1.2;
-  margin: auto;
-  margin-bottom: 100px;
-`;
-
 const Row = styled.div`
   display: flex;
   flex-direction: row;
@@ -186,16 +226,20 @@ const Row = styled.div`
   }
 `;
 
-const ResultText = styled.p`
+const ResultText = styled.h3`
   font-size: 18px;
 `;
 
 const Result = styled.div`
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  height: 40px;
+  background: #ffffff;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 4px #000000;
+  border-radius: 8px;
+  color: #000000;
+  height: 52px;
+  width: 100%;
+  maw-width: 718px;
   border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
   display: flex;
   align-items: center;
   justify-content: space-between;
