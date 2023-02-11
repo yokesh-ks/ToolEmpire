@@ -6,6 +6,7 @@ import { pdfListData } from "../src/constants";
 import { Card } from "../src/newComponents";
 import PDFParser from "pdf-parser";
 import { HeroSection } from "../container";
+import styled from "styled-components";
 
 const Pdf2Word = () => {
   const [pdfFile, setPdfFile] = useState(null);
@@ -246,51 +247,56 @@ const UploadProcessingSection = ({ file, progress, isLoading }) => {
 const BenefitsSection = () => {
   return (
     <div style={{ paddingTop: 120, paddingBottom: 120 }}>
-      <Container
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          gap: 48,
-        }}
-      >
-        {pdfListData?.map((item, index) => (
-          <Card
-            key={index}
-            style={{ paddingTop: 20, paddingLeft: 20, paddingBottom: 20 }}
-            colorVariant={item?.colorName}
-          >
-            <div
-              style={{
-                width: 60,
-                height: 60,
-                borderRadius: 60,
-                background: "#D9D9D9",
-              }}
-            />
-            <h6
-              style={{
-                fontSize: 24,
-                color: "#fff",
-                marginTop: 16,
-              }}
+      <Container>
+        <GridContainer>
+          {pdfListData?.map((item, index) => (
+            <Card
+              key={index}
+              style={{ paddingTop: 20, paddingLeft: 20, paddingBottom: 20 }}
+              colorVariant={item?.colorName}
             >
-              {item?.title}
-            </h6>
-            <h6
-              style={{
-                fontSize: 16,
-                color: "#fff",
-                marginTop: 16,
-                fontWeight: 600,
-              }}
-            >
-              {item?.description}
-            </h6>
-          </Card>
-        ))}
+              <div
+                style={{
+                  width: 60,
+                  height: 60,
+                  borderRadius: 60,
+                  background: "#D9D9D9",
+                }}
+              />
+              <h6
+                style={{
+                  fontSize: 24,
+                  color: "#fff",
+                  marginTop: 16,
+                }}
+              >
+                {item?.title}
+              </h6>
+              <h6
+                style={{
+                  fontSize: 16,
+                  color: "#fff",
+                  marginTop: 16,
+                  fontWeight: 600,
+                }}
+              >
+                {item?.description}
+              </h6>
+            </Card>
+          ))}
+        </GridContainer>
       </Container>
     </div>
   );
 };
 
+const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`;
 export default Pdf2Word;

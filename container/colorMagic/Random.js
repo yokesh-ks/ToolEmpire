@@ -57,14 +57,9 @@ const Random = () => {
       </NavBar>
       <WrapperContainer>
         <Row>
-          <h3 style={{ marginRight: 24, color: "#000000" }}>{activeTab}</h3>
+          <Title>{activeTab}</Title>
           <Input width="300px" value={result} />
-          <IconButton
-            onClick={() => copy(result)}
-            style={{ cursor: "pointer" }}
-          >
-            <Icon name="CopyLink" width={28} height={28} />
-          </IconButton>
+          <IconButton name="CopyLink" onClick={() => copy(result)} />
         </Row>
       </WrapperContainer>
       <Button onClick={() => handleButtonClick()}>Click Here</Button>
@@ -72,21 +67,25 @@ const Random = () => {
   );
 };
 
+const Title = styled.h3`
+  margin-right: ${({ theme }) => theme.spacing.spacing6};
+  color: ${({ theme }) => theme.colors.onNeutral};
+`;
+
 export default Random;
 
 const NavBar = styled.div`
   width: 100%;
   height: 78px;
   background: #ff5e5e;
-  box-shadow: 0px 4px 0px #000000;
-  margin-bottom: 144px;
+  box-shadow: 0px 4px 0px ${({ theme }) => theme.colors.onNeutral};
+  margin-bottom: ${({ theme }) => theme.spacing.spacing12};
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding-left: 40px;
-  padding-right: 40px;
-  color: #ffffff;
+  padding: 0px ${({ theme }) => theme.spacing.spacing8};
+  color: ${({ theme }) => theme.colors.onPrimary};
 `;
 
 const Container = styled.div`
@@ -96,7 +95,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 108px;
+  padding-bottom: ${({ theme }) => theme.spacing.spacing12};
 `;
 
 const WrapperContainer = styled.div`
@@ -104,29 +103,27 @@ const WrapperContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 24px;
-  background: #ffffff;
+  gap: ${({ theme }) => theme.spacing.spacing6};
+  background: ${({ theme }) => theme.colors.background};
   border-radius: 16px;
-  border: 4px solid #000000;
-  box-shadow: 8px 8px 4px #000000;
+  border: 4px solid ${({ theme }) => theme.colors.onNeutral};
+  box-shadow: 8px 8px 4px ${({ theme }) => theme.colors.onNeutral};
   margin: auto;
-  padding-bottom: 36px;
-  padding-left: 108px;
-  padding-right: 108px;
-  padding-top: 36px;
+  padding: ${({ theme }) => theme.spacing.spacing7}
+    ${({ theme }) => theme.spacing.spacing12};
 `;
 
 const Button = styled.div`
   width: 166px;
   height: 47px;
-  background: #0077ff;
-  border: 2px solid #000000;
-  box-shadow: 4px 4px 0px #000000;
+  background: ${({ theme }) => theme.colors.primary};
+  border: 2px solid ${({ theme }) => theme.colors.onNeutral};
+  box-shadow: 4px 4px 0px ${({ theme }) => theme.colors.onNeutral};
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
-  margin-top: 60px;
+  color: ${({ theme }) => theme.colors.onPrimary};
+  margin-top: ${({ theme }) => theme.spacing.spacing10};
   cursor: pointer;
 `;

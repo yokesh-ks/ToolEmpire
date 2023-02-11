@@ -1,7 +1,7 @@
 import Head from "next/head";
-import React, { useState, useEffect } from "react";
-import { useRouter } from "next/router";
+import React, { useState } from "react";
 import { HeroSection, Hex2Rgba, Rgba2Hex, Hex2Rgb, Random } from "../container";
+import styled from "styled-components";
 
 const data = [
   { title: "Hex to RGBA", fieldKey: "hex2rgba" },
@@ -36,34 +36,35 @@ export default function Home() {
       </Head>
       <HeroSection title="ColorMagic" description="Convert Color with Ease" />
       <div style={{ display: "flex", height: "100%", width: "100%", flex: 1 }}>
-        <div
-          style={{
-            background: "#000000",
-            width: 360,
-            paddingLeft: 24,
-            paddingRight: 24,
-            paddingTop: 48,
-            paddingBottom: 48,
-          }}
-        >
+        <RightSection>
           {data.map((item) => (
-            <h3
+            <TabName
               key={item?.fieldKey}
-              style={{
-                color: item?.fieldKey === activeTab ? "#00FF75" : "#FFFFFF",
-                fontSize: 24,
-                lineHeight: "29px",
-                paddingBottom: 24,
-                cursor: "pointer",
-              }}
+              active={item?.fieldKey === activeTab}
               onClick={() => setActiveTab(item?.fieldKey)}
             >
               {item?.title}
-            </h3>
+            </TabName>
           ))}
-        </div>
-        <>{handleConvertor(activeTab)}</>
+        </RightSection>
+        {handleConvertor(activeTab)}
       </div>
     </div>
   );
 }
+
+const RightSection = styled.div`
+  background: ${({ theme }) => theme.colors.onNeutral};
+  width: 360px;
+  padding: ${({ theme }) => theme.spacing.spacing9}
+    ${({ theme }) => theme.spacing.spacing6};
+`;
+
+const TabName = styled.h3`
+  color: ${({ active, theme }) =>
+    active ? "#00FF75" : theme.colors.onPrimary};
+  font-size: 24px;
+  line-height: 29px;
+  padding-bottom: ${({ theme }) => theme.spacing.spacing6};
+  cursor: pointer;
+`;

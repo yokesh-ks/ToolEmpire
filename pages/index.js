@@ -1,9 +1,7 @@
 import React from "react";
-import styled from "styled-components";
+
 import Head from "next/head";
-import Card from "../src/components/Card";
-import { Container } from "@uimakers/tools-ui";
-import { HeroSection } from "../container";
+import { HeroSection, AllToolSection } from "../container";
 
 const data = [
   {
@@ -37,61 +35,9 @@ function index() {
         title="ToolEmpire"
         description="Innovative tools for empire builders."
       />
-      <Container>
-        <Contents>
-          {data.map((item, index) => (
-            <Card
-              onClick={() => {
-                window.open(item?.routeName, "_self");
-              }}
-              key={index}
-            >
-              <div style={{ flex: 1, display: "flex", flexDirection: "row" }}>
-                <div
-                  style={{
-                    width: 60,
-                    height: 60,
-                    background: "#D9D9D9",
-                    borderRadius: 40,
-                  }}
-                ></div>
-                <div style={{ flex: 1, marginLeft: 20 }}>
-                  <h4>{item?.title}</h4>
-                  <p>{item?.description}</p>
-                </div>
-              </div>
-
-              <div style={{ display: "flex", justifyContent: "flex-end" }}>
-                <button>View Tool</button>
-              </div>
-            </Card>
-          ))}
-        </Contents>
-      </Container>
+      <AllToolSection data={data} />
     </div>
   );
 }
-
-const ImageContainer = styled.div`
-  position: relative;
-  width: 480px;
-  height: 480px;
-`;
-
-const Contents = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: 160px;
-  margin-bottom: 160px;
-  gap: 40px;
-
-  h3 {
-    color: #fff;
-    line-height: 1.5;
-    font-size: 20px;
-    letter-spacing: 1px;
-    font-weight: 500;
-  }
-`;
 
 export default index;

@@ -1,22 +1,27 @@
 import styled from "styled-components";
+import { Icon } from "../../icons";
 
 const IconButton = (props) => {
-  const { children, onClick = () => {} } = props;
-  return <ButtonWrap onClick={onClick}>{children}</ButtonWrap>;
+  const { onClick = () => {}, name } = props;
+  return (
+    <ButtonWrap onClick={onClick}>
+      <Icon name={name} width={28} height={28} />
+    </ButtonWrap>
+  );
 };
 
 const ButtonWrap = styled.div`
   width: 48px;
   height: 48px;
-  background: #ffffff;
-  border: 2px solid #000000;
-  box-shadow: 4px 4px 0px #000000;
+  background: ${({ theme }) => theme.colors.background};
+  border: 2px solid ${({ theme }) => theme.colors.onNeutral};
+  box-shadow: 4px 4px 0px ${({ theme }) => theme.colors.onNeutral};
   border-radius: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin-left: 24px;
+  margin-left: ${({ theme }) => theme.spacing.spacing6};
 `;
 
 export default IconButton;

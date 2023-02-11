@@ -31,7 +31,7 @@ const PxtoRem = (props) => {
                 <Icon name="CopyLink" width={28} height={28} />
               </div>
             </InputContain>
-            <IconButton onClick={() => setPxtorem(!pxtorem)}>
+            <IconButton  onClick={() => setPxtorem(!pxtorem)}>
               <Icon name="SwitchArrow" width={20} height={26} />
             </IconButton>
             <InputContain>

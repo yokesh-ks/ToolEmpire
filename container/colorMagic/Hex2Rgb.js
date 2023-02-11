@@ -42,29 +42,19 @@ const Hex2Rgb = () => {
     <Container backgroundColor={result}>
       <WrapperContainer>
         <Row>
-          <h3 style={{ marginRight: 24, color: "#000000" }}>Hex</h3>
+          <Title style={{ marginRight: 24, color: "#000000" }}>Hex</Title>
           <Input
             width="300px"
             value={value}
             onChange={(e) => setValue(e.target.value)}
           />
-          <IconButton
-            onClick={() => copy(value)}
-            style={{ cursor: "pointer" }}
-          >
-            <Icon name="CopyLink" width={28} height={28} />
-          </IconButton>
+          <IconButton name="CopyLink" onClick={() => copy(value)} />
         </Row>
         <Icon name="ArrowDown" width={23} height={30} />
         <Row>
-          <h3 style={{ marginRight: 24, color: "#000000" }}>RGBA</h3>
+          <Title style={{ marginRight: 24, color: "#000000" }}>RGBA</Title>
           <Input width="300px" value={result} />
-          <IconButton
-            onClick={() => copy(result)}
-            style={{ cursor: "pointer" }}
-          >
-            <Icon name="CopyLink" width={28} height={28} />
-          </IconButton>
+          <IconButton name="CopyLink" onClick={() => copy(result)} />
         </Row>
       </WrapperContainer>
     </Container>
@@ -73,14 +63,18 @@ const Hex2Rgb = () => {
 
 export default Hex2Rgb;
 
+const Title = styled.h3`
+  margin-right: ${({ theme }) => theme.spacing.spacing6};
+  color: ${({ theme }) => theme.colors.onNeutral};
+`;
+
 const Container = styled.div`
   width: 100%;
-  background: ${(props) => props.backgroundColor};
+  background: ${({ backgroundColor }) => backgroundColor};
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 144px;
-  padding-bottom: 144px;
+  padding: ${({ theme }) => theme.spacing.spacing12} 0px;
 `;
 
 const WrapperContainer = styled.div`
@@ -88,14 +82,12 @@ const WrapperContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 24px;
-  background: #ffffff;
+  gap: ${({ theme }) => theme.spacing.spacing6};
+  background: ${({ theme }) => theme.colors.background};
   border-radius: 16px;
-  border: 4px solid #000000;
-  box-shadow: 8px 8px 4px #000000;
+  border: 4px solid ${({ theme }) => theme.colors.onNeutral};
+  box-shadow: 8px 8px 4px ${({ theme }) => theme.colors.onNeutral};
   margin: auto;
-  padding-bottom: 36px;
-  padding-left: 108px;
-  padding-right: 108px;
-  padding-top: 36px;
+  padding: ${({ theme }) => theme.spacing.spacing7}
+    ${({ theme }) => theme.spacing.spacing12};
 `;

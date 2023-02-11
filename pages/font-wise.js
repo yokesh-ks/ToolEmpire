@@ -2,7 +2,6 @@ import Head from "next/head";
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { FontInputBox, PxtoRem } from "../src/components";
-import { Clamp } from "../src/utils/clamp";
 import { Icon } from "../icons";
 import { HeroSection } from "../container";
 import { copy } from "../utils";
@@ -141,7 +140,7 @@ export default function Home() {
             </Result>
           </div>
         </div>
-        <div
+        <RightSection
           style={{
             background: "#DD7DFF",
             width: 360,
@@ -152,21 +151,11 @@ export default function Home() {
           }}
         >
           <PxtoRem />
-        </div>
+        </RightSection>
       </div>
     </div>
   );
 }
-
-const Title = styled.h1`
-  font-size: ${Clamp(36, 20)};
-  font-weight: 400;
-  text-align: center;
-  color: #fff;
-  padding-top: 100px;
-  line-height: 1.2;
-  margin-bottom: 40px;
-`;
 
 const Row = styled.div`
   display: flex;
@@ -203,4 +192,14 @@ const Result = styled.div`
   justify-content: space-between;
   padding: 10px;
   margin-top: 40px;
+`;
+
+const RightSection = styled.div`
+  background: #dd7dff;
+  width: 360px;
+  padding: 24px 48px;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
