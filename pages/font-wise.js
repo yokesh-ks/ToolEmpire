@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { FontInputBox, PxtoRem, Toast } from "../src/components";
+import { FontInputBox, PxtoRem } from "../src/components";
 import { Clamp } from "../src/utils/clamp";
 import { Icon } from "../icons";
 import { HeroSection } from "../container";
@@ -11,7 +11,6 @@ export default function Home() {
   const [minScreenSize, setMinScreenSize] = useState(700);
   const [maxFontSize, setMaxFontSize] = useState(40);
   const [minFontSize, setMinFontSize] = useState(24);
-  const [toastActive, setToastActive] = useState(false);
   const [clamp, setClamp] = useState("");
 
   useEffect(() => {
@@ -28,7 +27,6 @@ export default function Home() {
 
   const handleCopy = () => {
     navigator.clipboard.writeText(clamp);
-    setToastActive(true);
   };
   return (
     <div>
@@ -143,12 +141,6 @@ export default function Home() {
                 <Icon name="CopyLink" width={28} height={28} />
               </div>
             </Result>
-            {toastActive && (
-              <Toast
-                toastActive={toastActive}
-                setToastActive={setToastActive}
-              />
-            )}
           </div>
         </div>
         <div
