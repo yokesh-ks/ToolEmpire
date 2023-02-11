@@ -35,7 +35,6 @@ export default function Home() {
         <meta name="description" content="Tools" />
       </Head>
       <HeroSection title="ColorMagic" description="Convert Color with Ease" />
-      {/* <ColorHeader /> */}
       <div style={{ display: "flex", height: "100%", width: "100%", flex: 1 }}>
         <div
           style={{
