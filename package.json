@@ -16,6 +16,7 @@
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@next/bundle-analyzer": "^12.2.0",
+    "@sentry/nextjs": "^7.54.0",
     "@uimakers/tools-ui": "^1.0.0",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
