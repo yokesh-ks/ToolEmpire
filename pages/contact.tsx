@@ -20,7 +20,7 @@ export default function SignIn() {
       body: JSON.stringify({
         access_key: process.env.CONTACT_FORM_ACCESS_KEY,
         name: e.target.name.value,
-        subject: "New Submission from Topological Material WebApp visitor",
+        subject: "New Submission from ToolEmpire WebApp visitor",
         email: e.target.email.value,
         message: e.target.message.value,
       }),
