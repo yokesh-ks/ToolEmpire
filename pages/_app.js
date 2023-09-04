@@ -1,7 +1,7 @@
 import "../src/styles/globals.js";
 import Theme from "../src/styles/theme";
 import "../src/styles/font.css";
-import "../src/style/index.css";
+import "../src/styles/index.css";
 
 function MyApp({ Component, pageProps }) {
   return (
