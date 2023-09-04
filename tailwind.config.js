@@ -6,10 +6,10 @@ module.exports = {
   content: [
     "pages/**/*.{ts,tsx}",
     "pages/**/*.{js,jsx}",
-    "components/**/*.{ts,tsx}",
-    "components/**/*.{js,jsx}",
     "src/components/**/*.{ts,tsx}",
     "src/components/**/*.{js,jsx}",
+    "src/container/**/*.{ts,tsx}",
+    "src/container/**/*.{js,jsx}",
   ],
   theme: {
     container: {
