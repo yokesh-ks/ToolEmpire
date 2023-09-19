@@ -31,6 +31,15 @@ export const Header = () => {
         >
           <p>Fontwise</p>
         </Link>
+        <Link
+          href="/code-glow"
+          className={`mr-5 text-sm ${
+            pathname !== "/code-glow" && "opacity-60"
+          }`}
+          passHref
+        >
+          <p>CodeGlow</p>
+        </Link>
         {/* <Link
           href="/color-magic"
           className={`mr-5 text-sm ${

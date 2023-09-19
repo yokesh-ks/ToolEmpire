@@ -17,6 +17,12 @@ const data = [
     iconName: "",
     routeName: "font-wise",
   },
+  {
+    title: "Code Glow",
+    description: "Illuminate Your Code, Captivate Your Audience",
+    iconName: "",
+    routeName: "code-glow",
+  },
   // {
   //   title: "PDF to WORD",
   //   description: "Transform Your PDFs into Word Docs in a Snap",
