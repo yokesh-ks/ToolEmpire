@@ -25,6 +25,7 @@ Welcome to a world of innovation and creativity! Discover a treasure trove of po
 
 - ColorMagic - Convert Color with Ease
 - FontWise - Responsive Font Calculator for Modern Web Design
+- CodeGlow - Illuminate Your Code, Captivate Your Audience
 
 ## Commands
 
