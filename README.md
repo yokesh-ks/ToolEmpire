@@ -32,6 +32,10 @@ Welcome to a world of innovation and creativity! Discover a treasure trove of po
 - [`Prettier`](https://prettier.io/) – Utilize this opinionated code formatter to maintain consistent code style across the project.
 - [`ESLint`](https://eslint.org/) – Implement a pluggable linter for Next.js and TypeScript to enforce coding standards.
 
+### Error Monitoring
+
+- [`Sentry`]() - Monitor and manage errors to enhance the application's stability and user experience.
+
 ---
 
 ## List of Tools
@@ -46,10 +50,10 @@ Welcome to a world of innovation and creativity! Discover a treasure trove of po
 
 | Command       | Action                                                                     |
 | :------------ | :------------------------------------------------------------------------- |
-| `pnpm i`      | Install dependencies                                                       |
-| `pnpm dev`    | Start local dev server at `localhost:3000`                                 |
-| `pnpm build`  | Build your production site to `./dist/`                                    |
-| `pnpm commit` | Create a new Git commit with standardized commit messages using commitizen |
+| `yarn`        | Install dependencies                                                       |
+| `yarn dev`    | Start local dev server at `localhost:3000`                                 |
+| `yarn build`  | Build your production site to `./dist/`                                    |
+| `yarn commit` | Create a new Git commit with standardized commit messages using commitizen |
 
 ---
 
