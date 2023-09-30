@@ -9,7 +9,8 @@
     "lint": "next lint",
     "commit": "git-cz",
     "analyze": "ANALYZE=true yarn build",
-    "svgr": "svgr --icon --replace-attr-values '#F2F2F2'={props.color} -d src icons/assets --out-dir icons/output --index-template icons-template.js"
+    "svgr": "svgr --icon --replace-attr-values '#F2F2F2'={props.color} -d src icons/assets --out-dir icons/output --index-template icons-template.js",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.2.1",
@@ -51,10 +52,12 @@
     "cz-conventional-changelog": "^3.3.0",
     "flourite": "^1.2.4",
     "framer-motion": "^6.3.16",
+    "globby": "11.1.0",
     "highlight.js": "^11.8.0",
     "html-to-image": "^1.11.11",
     "lucide-react": "^0.274.0",
     "next": "^13.4.19",
+    "next-sitemap": "^4.2.3",
     "next-themes": "^0.2.1",
     "pdf-parser": "^1.0.5",
     "re-resizable": "^6.9.11",

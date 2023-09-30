@@ -11,6 +11,9 @@ export default function SignIn() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    if (!process.env.CONTACT_FORM_SUBMIT_URL) {
+      return;
+    }
     const response = await fetch(process.env.CONTACT_FORM_SUBMIT_URL, {
       method: "POST",
       headers: {
