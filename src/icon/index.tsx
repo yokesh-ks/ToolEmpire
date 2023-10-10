@@ -31,11 +31,7 @@ export const Icon = (props) => {
   const IconComponent = iconComponents[props.name]
 
   if (IconComponent) {
-    return (
-      <div className='flex'>
-        <IconComponent {...props} />
-      </div>
-    )
+    return <IconComponent {...props} />
   }
   return null
 }
