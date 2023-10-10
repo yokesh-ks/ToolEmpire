@@ -12,7 +12,7 @@ const ListTools = (props) => {
 
   return (
     <Container>
-      <div className='grid grid-cols-3 gap-4'>
+      <div className='grid md:grid-cols-3 grid-cols-1 gap-4'>
         {data.map((item, index) => (
           <Card
             onClick={() => handleClick(item?.routeName)}
