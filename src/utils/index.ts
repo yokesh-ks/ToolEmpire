@@ -1,3 +1,3 @@
-import copy from "./copyHandler";
+import copy from './copyHandler'
 
-export { copy };
+export { copy }

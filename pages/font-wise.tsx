@@ -1,42 +1,44 @@
-import React, { useState, useEffect } from "react";
-import { copy } from "../src/utils";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { useToast } from "@/components/ui/use-toast";
+import React, { useEffect, useState } from 'react'
+
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { useToast } from '@/components/ui/use-toast'
+
+import { copy } from '../src/utils'
 
 export default function Home() {
-  const [maxScreenSize, setMaxScreenSize] = useState(1000);
-  const [minScreenSize, setMinScreenSize] = useState(700);
-  const [maxFontSize, setMaxFontSize] = useState(40);
-  const [minFontSize, setMinFontSize] = useState(24);
-  const [clamp, setClamp] = useState("");
-  const { toast } = useToast();
+  const [maxScreenSize, setMaxScreenSize] = useState(1000)
+  const [minScreenSize, setMinScreenSize] = useState(700)
+  const [maxFontSize, setMaxFontSize] = useState(40)
+  const [minFontSize, setMinFontSize] = useState(24)
+  const [clamp, setClamp] = useState('')
+  const { toast } = useToast()
 
   useEffect(() => {
     const b: any = (
       (maxFontSize - minFontSize) /
       (maxScreenSize - minScreenSize)
-    ).toFixed(3);
-    const a = ((maxFontSize - maxScreenSize * b) / 16).toFixed(3);
+    ).toFixed(3)
+    const a = ((maxFontSize - maxScreenSize * b) / 16).toFixed(3)
     const output = `clamp(${minFontSize / 16}rem, ${a}rem + ${b}vw, ${
       maxFontSize / 16
-    }rem)`;
-    setClamp(output);
-  }, [maxScreenSize, minScreenSize, maxFontSize, minFontSize]);
+    }rem)`
+    setClamp(output)
+  }, [maxScreenSize, minScreenSize, maxFontSize, minFontSize])
 
   return (
     <div>
-      <div className="flex h-full w-full flex-1">
-        <div className="flex h-full w-full flex-1">
+      <div className='flex h-full w-full flex-1'>
+        <div className='flex h-full w-full flex-1'>
           <div
             style={{
               maxWidth: 800,
-              margin: "auto",
+              margin: 'auto',
               paddingTop: 144,
               paddingBottom: 144,
             }}
           >
-            <div className="flex gap-4 items-center">
+            <div className='flex gap-4 items-center'>
               <h3>Minimum size</h3>
               <Input
                 style={{ width: 100 }}
@@ -50,7 +52,7 @@ export default function Home() {
                 onChange={(e: any) => setMinScreenSize(e.target.value)}
               />
             </div>
-            <div className="flex gap-4 mt-4 items-center">
+            <div className='flex gap-4 mt-4 items-center'>
               <h3>Maximum size</h3>
               <Input
                 style={{ width: 100 }}
@@ -65,15 +67,15 @@ export default function Home() {
               />
             </div>
 
-            <div className="flex mt-4">
+            <div className='flex mt-4'>
               <Input value={clamp} />
               <Button
                 onClick={() => {
-                  copy(clamp);
+                  copy(clamp)
                   toast({
-                    title: "Value Copied",
+                    title: 'Value Copied',
                     description: clamp,
-                  });
+                  })
                 }}
               >
                 Copy
@@ -83,5 +85,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-  );
+  )
 }

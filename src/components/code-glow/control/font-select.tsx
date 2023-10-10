@@ -1,29 +1,31 @@
-import { fonts } from "@/constants/code-fonts";
+import { fonts } from '@/constants/code-fonts'
+
+import useStore from '@/store/store'
+
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../../ui/select";
-import useStore from "@/store/store";
+} from '../../ui/select'
 
 export default function FontSelect() {
-  const fontStyle = useStore((state) => state.fontStyle);
+  const fontStyle = useStore((state) => state.fontStyle)
 
   return (
     <div>
-      <label className="block mb-2 text-xs font-medium text-neutral-400">
+      <label className='block mb-2 text-xs font-medium text-neutral-400'>
         Font
       </label>
       <Select
         value={fontStyle}
         onValueChange={(fontStyle) => useStore.setState({ fontStyle })}
       >
-        <SelectTrigger className="w-36">
-          <SelectValue placeholder="Select Font" />
+        <SelectTrigger className='w-36'>
+          <SelectValue placeholder='Select Font' />
         </SelectTrigger>
-        <SelectContent className="max-h-[500px]">
+        <SelectContent className='max-h-[500px]'>
           {Object.entries(fonts).map(([id, font]) => (
             <SelectItem key={id} value={id}>
               {font.name}
@@ -32,5 +34,5 @@ export default function FontSelect() {
         </SelectContent>
       </Select>
     </div>
-  );
+  )
 }

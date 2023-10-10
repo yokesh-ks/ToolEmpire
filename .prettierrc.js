@@ -12,7 +12,7 @@ module.exports = {
     '^@/icon/(.*)$',
     '^@/store/(.*)$',
     '^@/lib/(.*)$',
-    '^@/radix-ui/(.*)$',
+    '^@radix-ui/(.*)$',
     '^@/utils/(.*)$',
     '^@/(.*)$',
     '^@/emails/(.*)$',

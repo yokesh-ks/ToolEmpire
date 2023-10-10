@@ -1,61 +1,63 @@
-import React, { useEffect, useState, useCallback } from "react";
-import Head from "next/head";
-import { Container } from "@uimakers/tools-ui";
-import { pdfListData } from "../src/constants";
-import PDFParser from "pdf-parser";
-import styled from "styled-components";
-import { Button } from "@/components/ui/button";
+import { Container } from '@uimakers/tools-ui'
+import Head from 'next/head'
+import PDFParser from 'pdf-parser'
+import React, { useCallback, useEffect, useState } from 'react'
+import styled from 'styled-components'
+
+import { Button } from '@/components/ui/button'
+
+import { pdfListData } from '../src/constants'
 
 const Pdf2Word = () => {
-  const [pdfFile, setPdfFile] = useState(null);
-  const [wordFile, setWordFile] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const [progress, setProgress] = useState(0);
+  const [pdfFile, setPdfFile] = useState(null)
+  const [wordFile, setWordFile] = useState(null)
+  const [isLoading, setIsLoading] = useState(false)
+  const [progress, setProgress] = useState(0)
 
   const handleSubmit = useCallback(async () => {
-    if (!pdfFile) return;
-    console.log(pdfFile);
-    setIsLoading(true);
-    const pdfParser = await PDFParser();
-    pdfParser.on("pdfParser_dataError", (errData) =>
-      console.error(errData.parserError)
-    );
-    pdfParser.on("pdfParser_dataReady", (pdfData) => {
+    if (!pdfFile) return
+    console.log(pdfFile)
+    setIsLoading(true)
+    const pdfParser = await PDFParser()
+    pdfParser.on('pdfParser_dataError', (errData) =>
+      console.error(errData.parserError),
+    )
+    pdfParser.on('pdfParser_dataReady', (pdfData) => {
       // Convert pdfData to Word format
-      setWordFile(convertToWord(pdfData));
-      setIsLoading(false);
-    });
-    pdfParser.on("pdfParser_dataProgress", (progressData) => {
-      setProgress(Math.round(progressData.percentage));
-    });
-    pdfParser.parseBuffer(pdfFile);
-    console.log(pdfParser);
-  }, [pdfFile]);
+      setWordFile(convertToWord(pdfData))
+      setIsLoading(false)
+    })
+    pdfParser.on('pdfParser_dataProgress', (progressData) => {
+      setProgress(Math.round(progressData.percentage))
+    })
+    pdfParser.parseBuffer(pdfFile)
+    console.log(pdfParser)
+  }, [pdfFile])
 
   const handleDragOver = (event) => {
-    event.preventDefault();
-  };
+    event.preventDefault()
+  }
 
   useEffect(() => {
-    if (!pdfFile) return;
-    handleSubmit();
-  }, [pdfFile]);
+    if (!pdfFile) return
+    handleSubmit()
+  }, [pdfFile])
 
   const handleDrop = (event) => {
-    event.preventDefault();
-    setPdfFile(event.dataTransfer.files[0]);
-  };
+    event.preventDefault()
+    setPdfFile(event.dataTransfer.files[0])
+  }
 
   const convertToWord = (pdfData) => {
     // Convert pdfData to Word format
-    return pdfData;
-  };
+    return pdfData
+  }
 
   return (
     <div>
       <Head>
         <title>ToolEmpire | Pdf2Word</title>
-        <meta name="description" content="Tools" />
+        <meta name='description' content='Tools' />
       </Head>
       <SecondarySection />
 
@@ -78,8 +80,8 @@ const Pdf2Word = () => {
       ) : null}
       <BenefitsSection />
     </div>
-  );
-};
+  )
+}
 
 const SecondarySection = () => {
   return (
@@ -90,30 +92,30 @@ const SecondarySection = () => {
       </h3>
       <h3>Give it a try today!</h3>
     </Container>
-  );
-};
+  )
+}
 
 const UploadSection = () => {
   return (
     <div
       style={{
-        backgroundColor: "#0077FF",
+        backgroundColor: '#0077FF',
         paddingTop: 108,
         paddingBottom: 108,
       }}
     >
       <Container
         style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
         }}
       >
         <h1
           style={{
             fontSize: 48,
-            color: "#fff",
-            textAlign: "center",
+            color: '#fff',
+            textAlign: 'center',
             marginBottom: 40,
           }}
         >
@@ -122,8 +124,8 @@ const UploadSection = () => {
         <h5
           style={{
             fontSize: 24,
-            color: "#fff",
-            textAlign: "center",
+            color: '#fff',
+            textAlign: 'center',
             marginTop: 40,
             marginBottom: 32,
             opacity: 0.8,
@@ -134,8 +136,8 @@ const UploadSection = () => {
         <h6
           style={{
             fontSize: 24,
-            color: "#fff",
-            textAlign: "center",
+            color: '#fff',
+            textAlign: 'center',
             marginBottom: 32,
           }}
         >
@@ -144,30 +146,30 @@ const UploadSection = () => {
         <Button>Upload PDF TO CONVERT</Button>
       </Container>
     </div>
-  );
-};
+  )
+}
 
 const UploadProcessingSection = ({ file, progress, isLoading }) => {
   return (
     <div
       style={{
-        backgroundColor: "#0077FF",
+        backgroundColor: '#0077FF',
         paddingTop: 108,
         paddingBottom: 108,
       }}
     >
       <Container
         style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
         }}
       >
         <h1
           style={{
             fontSize: 48,
-            color: "#fff",
-            textAlign: "center",
+            color: '#fff',
+            textAlign: 'center',
             marginBottom: 32,
           }}
         >
@@ -176,8 +178,8 @@ const UploadProcessingSection = ({ file, progress, isLoading }) => {
         <h6
           style={{
             fontSize: 24,
-            color: "#fff",
-            textAlign: "center",
+            color: '#fff',
+            textAlign: 'center',
           }}
         >
           {file?.name}
@@ -185,8 +187,8 @@ const UploadProcessingSection = ({ file, progress, isLoading }) => {
         <h6
           style={{
             fontSize: 24,
-            color: "#fff",
-            textAlign: "center",
+            color: '#fff',
+            textAlign: 'center',
           }}
         >
           {progress}
@@ -194,16 +196,16 @@ const UploadProcessingSection = ({ file, progress, isLoading }) => {
         <h6
           style={{
             fontSize: 24,
-            color: "#fff",
-            textAlign: "center",
+            color: '#fff',
+            textAlign: 'center',
           }}
         >
           {isLoading}
         </h6>
       </Container>
     </div>
-  );
-};
+  )
+}
 
 const BenefitsSection = () => {
   return (
@@ -220,13 +222,13 @@ const BenefitsSection = () => {
                   width: 60,
                   height: 60,
                   borderRadius: 60,
-                  background: "#D9D9D9",
+                  background: '#D9D9D9',
                 }}
               />
               <h6
                 style={{
                   fontSize: 24,
-                  color: "#fff",
+                  color: '#fff',
                   marginTop: 16,
                 }}
               >
@@ -235,7 +237,7 @@ const BenefitsSection = () => {
               <h6
                 style={{
                   fontSize: 16,
-                  color: "#fff",
+                  color: '#fff',
                   marginTop: 16,
                   fontWeight: 600,
                 }}
@@ -247,8 +249,8 @@ const BenefitsSection = () => {
         </GridContainer>
       </Container>
     </div>
-  );
-};
+  )
+}
 
 const GridContainer = styled.div`
   display: grid;
@@ -258,14 +260,14 @@ const GridContainer = styled.div`
   @media only screen and (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
   }
-`;
-export default Pdf2Word;
+`
+export default Pdf2Word
 
 export async function getServerSideProps(ctx) {
   return {
     redirect: {
       permanent: false,
-      destination: "/404",
+      destination: '/404',
     },
-  };
+  }
 }

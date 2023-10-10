@@ -1,5 +1,5 @@
 const copy = (text) => {
-  navigator.clipboard.writeText(text);
-};
+  navigator.clipboard.writeText(text)
+}
 
-export default copy;
+export default copy

@@ -1,3 +1,3 @@
-import pdfListData from "./pdfData";
+import pdfListData from './pdfData'
 
-export { pdfListData };
+export { pdfListData }

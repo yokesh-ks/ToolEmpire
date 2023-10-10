@@ -1,10 +1,10 @@
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: process.env.ANALYZE === "true",
-});
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
 
 module.exports = withBundleAnalyzer({
   reactStrictMode: true,
-});
+})
 
 module.exports = (phase, { defaultConfig }) => {
   return {
@@ -18,15 +18,15 @@ module.exports = (phase, { defaultConfig }) => {
           path: false,
           os: false,
         },
-      };
-      return config;
+      }
+      return config
     },
-  };
-};
+  }
+}
 
 // Injected content via Sentry wizard below
 
-const { withSentryConfig } = require("@sentry/nextjs");
+const { withSentryConfig } = require('@sentry/nextjs')
 
 module.exports = withSentryConfig(
   module.exports,
@@ -51,18 +51,18 @@ module.exports = withSentryConfig(
     transpileClientSDK: true,
 
     // Routes browser requests to Sentry through a Next.js rewrite to circumvent ad-blockers (increases server load)
-    tunnelRoute: "/monitoring",
+    tunnelRoute: '/monitoring',
 
     // Hides source maps from generated client bundles
     hideSourceMaps: true,
 
     // Automatically tree-shake Sentry logger statements to reduce bundle size
     disableLogger: true,
-  }
-);
+  },
+)
 
 const withPWA = require('next-pwa')({
-  dest: 'public'
+  dest: 'public',
 })
 
 module.exports = withPWA({

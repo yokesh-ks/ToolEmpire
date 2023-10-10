@@ -46,43 +46,43 @@ export const themes = {
   // },
 
   breeze: {
-    background: "bg-gradient-breeze",
+    background: 'bg-gradient-breeze',
     theme:
-      "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/base16/material-darker.min.css",
+      'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/base16/material-darker.min.css',
   },
   candy: {
-    background: "bg-gradient-candy",
+    background: 'bg-gradient-candy',
     theme:
-      "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/base16/chalk.min.css",
+      'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/base16/chalk.min.css',
   },
   crimson: {
-    background: "bg-gradient-crimson",
+    background: 'bg-gradient-crimson',
     theme:
-      "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css",
+      'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css',
   },
   falcon: {
-    background: "bg-gradient-falcon",
+    background: 'bg-gradient-falcon',
     theme:
-      "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/monokai-sublime.min.css",
+      'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/monokai-sublime.min.css',
   },
   meadow: {
-    background: "bg-gradient-meadow",
+    background: 'bg-gradient-meadow',
     theme:
-      "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/tokyo-night-dark.min.css",
+      'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/tokyo-night-dark.min.css',
   },
   midnight: {
-    background: "bg-gradient-midnight",
+    background: 'bg-gradient-midnight',
     theme:
-      "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/base16/zenburn.min.css",
+      'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/base16/zenburn.min.css',
   },
   raindrop: {
-    background: "bg-gradient-raindrop",
+    background: 'bg-gradient-raindrop',
     theme:
-      "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/panda-syntax-dark.min.css",
+      'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/panda-syntax-dark.min.css',
   },
   sunset: {
-    background: "bg-gradient-sunset",
+    background: 'bg-gradient-sunset',
     theme:
-      "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/base16/ashes.min.css",
+      'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/base16/ashes.min.css',
   },
-};
+}

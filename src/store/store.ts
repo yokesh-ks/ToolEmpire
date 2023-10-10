@@ -1,22 +1,23 @@
-import { create } from "zustand";
-import { persist } from "zustand/middleware";
+import { create } from 'zustand'
+import { persist } from 'zustand/middleware'
+
 const useStore = create(
   persist(
     () => ({
-      code: "",
-      title: "Untitled",
-      theme: "breeze",
+      code: '',
+      title: 'Untitled',
+      theme: 'breeze',
       darkMode: true,
       showBackground: true,
-      language: "plaintext",
+      language: 'plaintext',
       autoDetectLanguage: false,
       fontSize: 18,
-      fontStyle: "jetBrainsMono",
+      fontStyle: 'jetBrainsMono',
       padding: 64,
     }),
     {
-      name: "user-preferences",
-    }
-  )
-);
-export default useStore;
+      name: 'user-preferences',
+    },
+  ),
+)
+export default useStore

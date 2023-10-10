@@ -1,37 +1,40 @@
-import { languages } from "@/constants/code-language";
+import { languages } from '@/constants/code-language'
+
+import useStore from '@/store/store'
+
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../../ui/select";
-import useStore from "@/store/store";
+} from '../../ui/select'
+
 // import { MagicWandIcon } from "@radix-ui/react-icons";
 
 export default function LanguageSelect() {
-  const language = useStore((state) => state.language);
-  const autoDetectLanguage = useStore((state) => state.autoDetectLanguage);
+  const language = useStore((state) => state.language)
+  const autoDetectLanguage = useStore((state) => state.autoDetectLanguage)
 
   const handleChange = (language) => {
-    if (language === "auto-detect") {
-      useStore.setState({ autoDetectLanguage: true, language: "plaintext" });
+    if (language === 'auto-detect') {
+      useStore.setState({ autoDetectLanguage: true, language: 'plaintext' })
     } else {
-      useStore.setState({ autoDetectLanguage: false, language });
+      useStore.setState({ autoDetectLanguage: false, language })
     }
-  };
+  }
   return (
     <div>
-      <label className="block mb-2 text-xs font-medium text-neutral-400">
+      <label className='block mb-2 text-xs font-medium text-neutral-400'>
         Language
       </label>
       <Select value={language} onValueChange={handleChange}>
-        <SelectTrigger className="w-36">
+        <SelectTrigger className='w-36'>
           {/* {autoDetectLanguage && <MagicWandIcon className="mr-2" />} */}
-          <SelectValue placeholder="Select Language" />
+          <SelectValue placeholder='Select Language' />
         </SelectTrigger>
-        <SelectContent className="max-h-[500px]">
-          <SelectItem value="auto-detect">Auto Detect</SelectItem>
+        <SelectContent className='max-h-[500px]'>
+          <SelectItem value='auto-detect'>Auto Detect</SelectItem>
           {Object.entries(languages).map(([lang, name]) => (
             <SelectItem key={lang} value={lang}>
               {name}
@@ -40,5 +43,5 @@ export default function LanguageSelect() {
         </SelectContent>
       </Select>
     </div>
-  );
+  )
 }

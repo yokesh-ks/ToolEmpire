@@ -1,9 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import { Container } from "@uimakers/tools-ui";
-import { useRouter } from "next/router";
+import { Container } from '@uimakers/tools-ui'
+import { useRouter } from 'next/router'
+import React from 'react'
+import styled from 'styled-components'
+
 const ColorHeader = () => {
-  const router = useRouter();
+  const router = useRouter()
   return (
     <NavBar>
       <Container>
@@ -26,10 +27,10 @@ const ColorHeader = () => {
         </NavBarContain>
       </Container>
     </NavBar>
-  );
-};
+  )
+}
 
-export default ColorHeader;
+export default ColorHeader
 
 const NavBar = styled.div`
   position: absolute;
@@ -38,7 +39,7 @@ const NavBar = styled.div`
   background: rgba(35, 60, 115, 0.3);
   left: 0;
   top: 70px;
-`;
+`
 
 const NavBarContain = styled.div`
   display: flex;
@@ -50,7 +51,7 @@ const NavBarContain = styled.div`
   h3 {
     color: white;
   }
-`;
+`
 
 const NavMenu = styled.div`
   display: flex;
@@ -60,9 +61,9 @@ const NavMenu = styled.div`
   height: 100%;
   gap: 20px;
   cursor: pointer;
-`;
+`
 
 const MenuItem = styled.p`
   color: white;
   font-size: 16px;
-`;
+`

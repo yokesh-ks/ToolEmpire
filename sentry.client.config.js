@@ -1,8 +1,7 @@
 // This file configures the initialization of Sentry on the client.
 // The config you add here will be used whenever a users loads a page in their browser.
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/
-
-import * as Sentry from "@sentry/nextjs";
+import * as Sentry from '@sentry/nextjs'
 
 Sentry.init({
   dsn: process.env.SENTRY_DSN,
@@ -23,7 +22,7 @@ Sentry.init({
   integrations: [
     new Sentry.BrowserTracing({
       // Set `tracePropagationTargets` to control for which URLs distributed tracing should be enabled
-      tracePropagationTargets: ["localhost", /^https:\/\/yourserver\.io\/api/],
+      tracePropagationTargets: ['localhost', /^https:\/\/yourserver\.io\/api/],
     }),
     new Sentry.Replay({
       // Additional Replay configuration goes in here, for example:
@@ -31,4 +30,4 @@ Sentry.init({
       blockAllMedia: true,
     }),
   ],
-});
+})

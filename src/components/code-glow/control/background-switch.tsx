@@ -1,12 +1,13 @@
-import useStore from "@/store/store";
-import { Switch } from "../../ui/switch";
+import useStore from '@/store/store'
+
+import { Switch } from '../../ui/switch'
 
 export default function BackgroundSwitch() {
-  const showBg = useStore((state) => state.showBackground);
+  const showBg = useStore((state) => state.showBackground)
 
   return (
     <div>
-      <label className="block mb-2 text-xs font-medium text-neutral-400">
+      <label className='block mb-2 text-xs font-medium text-neutral-400'>
         Background
       </label>
       <Switch
@@ -14,8 +15,8 @@ export default function BackgroundSwitch() {
         onCheckedChange={(checked) =>
           useStore.setState({ showBackground: checked })
         }
-        className="my-1.5"
+        className='my-1.5'
       />
     </div>
-  );
+  )
 }
