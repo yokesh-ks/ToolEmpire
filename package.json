@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "commit": "git-cz",
+    "format": "npx prettier . --write",
     "analyze": "ANALYZE=true yarn build",
     "svgr": "svgr --icon --replace-attr-values '#F2F2F2'={props.color} -d src icons/assets --out-dir icons/output --index-template icons-template.js",
     "postbuild": "next-sitemap"
@@ -79,6 +80,7 @@
   },
   "devDependencies": {
     "@svgr/cli": "^6.5.1",
+    "@trivago/prettier-plugin-sort-imports": "^4.2.0",
     "@types/react": "^18.2.21",
     "autoprefixer": "^10.4.15",
     "eslint": "8.11.0",
