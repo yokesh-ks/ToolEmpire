@@ -36,7 +36,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
 
     urls.push({
-      url: `https://topological-materials.vercel.app${route}`,
+      url: `https://tool-empire.vercel.app${route}`,
       lastModified: new Date(),
     })
     return
