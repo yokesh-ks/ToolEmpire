@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 export default function useLocalStorage() {
   const [backup, setBackup] = useState(null)
-  const [timer, setTimer] = useState(null)
+  const [timer, setTimer] = useState<NodeJS.Timeout | null>(null)
 
   useEffect(() => {
     const localBackup = localStorage.getItem('readme-backup')
@@ -21,7 +21,7 @@ export default function useLocalStorage() {
       setTimer(
         setTimeout(() => {
           localStorage.setItem('readme-backup', JSON.stringify(templates))
-        }, 1000)
+        }, 1000),
       )
     } catch (_) {
       console.error('Failed to create local backup')
