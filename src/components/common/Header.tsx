@@ -11,8 +11,8 @@ export const Header = () => {
   const router = useRouter()
 
   return (
-    <nav className='border-b flex flex-col sm:flex-row items-start sm:items-center sm:pr-10 fixed w-full z-20 bg-background'>
-      <div className='py-3 px-8 flex flex-1 items-center'>
+    <nav className='border-b flex flex-col sm:flex-row items-start sm:items-center fixed w-full z-20 bg-background px-6'>
+      <div className='py-3 flex flex-1 items-center'>
         <Link href='/' className='mr-5 flex items-center' passHref>
           <p className={`ml-2 mr-4 text-lg font-semibold`}>Tool Empire</p>
         </Link>
@@ -52,7 +52,7 @@ export const Header = () => {
         </Link> */}
       </div>
       <div
-        className='flex sm:items-center pl-8 pb-3 sm:p-0 gap-4
+        className='flex sm:items-center pb-3 sm:p-0 gap-4
       '
       >
         <Button variant='outline' onClick={() => router.push('/contact')}>

@@ -4,9 +4,13 @@ import {
   ChevronLeft,
   ChevronRight,
   Circle,
+  GripVertical,
   MoonIcon,
+  Plus,
+  RotateCcw,
   Search,
   SunIcon,
+  Trash2,
   X,
 } from 'lucide-react'
 
@@ -25,6 +29,10 @@ const iconComponents = {
   Spinner,
   X,
   Search,
+  RotateCcw,
+  Trash2,
+  GripVertical,
+  Plus,
 }
 
 export const Icon = (props) => {

@@ -114,3 +114,7 @@
     rgb(255, 122, 47)
   );
 }
+
+.readme-editor-full {
+  height: calc(100vh - 124px);
+}

@@ -23,6 +23,12 @@ const data = [
     iconName: '',
     routeName: 'code-glow',
   },
+  {
+    title: 'Readme Generator',
+    description: 'Illuminate Your Code, Captivate Your Audience',
+    iconName: '',
+    routeName: 'readme-editor',
+  },
   // {
   //   title: "PDF to WORD",
   //   description: "Transform Your PDFs into Word Docs in a Snap",
