@@ -1,5 +1,7 @@
+import { useTheme } from 'next-themes'
 import ReactMarkdown from 'react-markdown'
 
+import '../../styles/github-markdown.css'
 import { Card } from '../ui/card'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs'
 import RawPreview from './RawPreview'
@@ -15,6 +17,8 @@ export const PreviewColumn = ({ selectedSectionSlugs, getTemplate }) => {
     }
   }, ``)
 
+  const { theme } = useTheme()
+
   return (
     <Tabs defaultValue='preview'>
       <TabsList className='grid w-48 grid-cols-2'>
@@ -22,8 +26,11 @@ export const PreviewColumn = ({ selectedSectionSlugs, getTemplate }) => {
         <TabsTrigger value='raw'>Raw</TabsTrigger>
       </TabsList>
       <TabsContent value='preview'>
-        <Card className={`p-4 overflow-scroll readme-editor-full`}>
-          <ReactMarkdown className='markdown'>{markdown}</ReactMarkdown>
+        <Card
+          className={`p-4 overflow-scroll readme-editor-full [data-theme=${theme}] markdown-body`}
+          style={{ background: 'transparent' }}
+        >
+          <ReactMarkdown className={``}>{markdown}</ReactMarkdown>
         </Card>
       </TabsContent>
       <TabsContent value='raw'>
