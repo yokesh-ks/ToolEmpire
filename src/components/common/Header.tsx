@@ -41,6 +41,15 @@ export const Header = () => {
         >
           <p>CodeGlow</p>
         </Link>
+        <Link
+          href='/readme-generator'
+          className={`mr-5 text-sm ${
+            pathname !== '/readme-generator' && 'opacity-60'
+          } `}
+          passHref
+        >
+          <p>ReadmeMagic</p>
+        </Link>
         {/* <Link
           href="/color-magic"
           className={`mr-5 text-sm ${

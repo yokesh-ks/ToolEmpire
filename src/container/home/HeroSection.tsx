@@ -1,9 +1,8 @@
-import { useRouter } from 'next/router'
-
 import { Button } from '@/components/ui/button'
 
-export const Hero = () => {
-  const router = useRouter()
+export const Hero = (props) => {
+  const { buttonLabel, description, handleButtonCLick, title } = props
+
   return (
     <div
       id='home'
@@ -17,18 +16,14 @@ export const Hero = () => {
               data-wow-delay='.2s'
             >
               <h1 className='mb-8 text-3xl font-bold leading-snug sm:text-4xl sm:leading-snug md:text-[45px] md:leading-snug'>
-                Innovative tools for empire builders.
+                {title}
               </h1>
               <p className='mx-auto mb-10 max-w-[720px] text-base  sm:text-lg sm:leading-relaxed md:text-xl md:leading-relaxed'>
-                Welcome to a world of innovation and creativity! Discover a
-                treasure trove of powerful tools designed to empower empire
-                builders like you. Whether you&apos;re a designer, marketer,
-                developer, or entrepreneur, our site offers an array of
-                essential utilities at your fingertips.
+                {description}
               </p>
               <ul className='mb-10 flex flex-wrap items-center justify-center'>
-                <Button onClick={() => router.push('/font-wise')}>
-                  Start Exploring
+                <Button onClick={() => handleButtonCLick()}>
+                  {buttonLabel}
                 </Button>
               </ul>
             </div>
