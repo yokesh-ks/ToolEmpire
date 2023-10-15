@@ -48,7 +48,16 @@ export const Header = () => {
           } `}
           passHref
         >
-          <p>ReadmeMagic</p>
+          <p>Readme Magic</p>
+        </Link>
+        <Link
+          href='/json-formatter'
+          className={`mr-5 text-sm ${
+            pathname !== '/json-formatter' && 'opacity-60'
+          } `}
+          passHref
+        >
+          <p>JSON Wizard</p>
         </Link>
         {/* <Link
           href="/color-magic"
@@ -60,10 +69,7 @@ export const Header = () => {
           <p>Color Magic</p>
         </Link> */}
       </div>
-      <div
-        className='flex sm:items-center pb-3 sm:p-0 gap-4
-      '
-      >
+      <div className='flex sm:items-center pb-3 sm:p-0 gap-4'>
         <Button variant='outline' onClick={() => router.push('/contact')}>
           Feedback
         </Button>

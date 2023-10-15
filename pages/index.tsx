@@ -30,6 +30,12 @@ const data = [
     iconName: '',
     routeName: 'readme-generator',
   },
+  {
+    title: 'JSON Wizard',
+    description: 'Organize and beautifying messy JSON data',
+    iconName: '',
+    routeName: 'json-formatter',
+  },
   // {
   //   title: "PDF to WORD",
   //   description: "Transform Your PDFs into Word Docs in a Snap",
