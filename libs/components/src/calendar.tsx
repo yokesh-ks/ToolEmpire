@@ -1,10 +1,9 @@
-import { cn } from '@tool-empire/utils'
 import * as React from 'react'
 import { DayPicker } from 'react-day-picker'
 
 import { buttonVariants } from '@tool-empire/components'
-
-import { Icon } from '@/icon'
+import { Icon } from '@tool-empire/icon'
+import { cn } from '@tool-empire/utils'
 
 export type CalendarProps = React.ComponentProps<typeof DayPicker>
 

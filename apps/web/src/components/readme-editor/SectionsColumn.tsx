@@ -18,10 +18,9 @@ import { useEffect, useState } from 'react'
 import { Card } from '@tool-empire/components'
 import { Input } from '@tool-empire/components'
 import { Tabs, TabsList, TabsTrigger } from '@tool-empire/components'
+import { Icon } from '@tool-empire/icon'
 
 import useLocalStorage from '@/hooks/useLocalStorage'
-
-import { Icon } from '@/icon'
 
 import CustomSection from './CustomSection'
 import { SortableItem } from './SortableItem'

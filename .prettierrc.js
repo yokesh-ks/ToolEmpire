@@ -5,12 +5,11 @@ module.exports = {
   jsxSingleQuote: true,
   plugins: [require.resolve('@trivago/prettier-plugin-sort-imports')],
   importOrder: [
-    "@tool-empire/components",
+    '@tool-empire/(.*)$',
     '^@/components/(.*)$',
     '^@/constants/(.*)$',
     '^@/container/(.*)$',
     '^@/hooks/(.*)$',
-    '^@/icon/(.*)$',
     '^@/store/(.*)$',
     '^@/lib/(.*)$',
     '^@radix-ui/(.*)$',

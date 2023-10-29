@@ -1,9 +1,9 @@
-import { cn } from '@tool-empire/utils'
 import Head from 'next/head'
 import { Resizable } from 're-resizable'
 import { useEffect, useRef, useState } from 'react'
 
 import { Button } from '@tool-empire/components'
+import { cn } from '@tool-empire/utils'
 
 import CodeEditor from '@/components/code-glow/code-editor'
 import { Control } from '@/components/code-glow/control'

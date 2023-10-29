@@ -22,7 +22,6 @@ export const EditorColumn = ({
     setMarkdown(markdown)
   }, [focusedSectionSlug, templates])
 
-
   const onEdit = (val) => {
     setMarkdown(val)
     const newTemplates = templates.map((template) => {

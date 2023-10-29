@@ -22,7 +22,7 @@ Welcome to a world of innovation and creativity! Discover a treasure trove of po
 
 ### Progressive Web App (PWA) Support
 
-- [`PWA`](https://github.com/shadowwalker/next-pwa): Utilize Progressive Web App principles to enhance the application's user experience, providing features like responsive design, app-like interactions, and efficient caching for faster load times. 
+- [`PWA`](https://github.com/shadowwalker/next-pwa): Utilize Progressive Web App principles to enhance the application's user experience, providing features like responsive design, app-like interactions, and efficient caching for faster load times.
 
 ### UI
 
@@ -58,9 +58,8 @@ Welcome to a world of innovation and creativity! Discover a treasure trove of po
 | `yarn`        | Install dependencies                                                       |
 | `yarn dev`    | Start local dev server at `localhost:3000`                                 |
 | `yarn build`  | Build your production site to `./dist/`                                    |
-| `yarn format` | 	Format code with Prettier                                                |
+| `yarn format` | Format code with Prettier                                                  |
 | `yarn commit` | Create a new Git commit with standardized commit messages using commitizen |
-
 
 ---
 
@@ -84,4 +83,4 @@ Welcome to a world of innovation and creativity! Discover a treasure trove of po
    └─ utils
 ```
 
-![Alt](https://repobeats.axiom.co/api/embed/4a54d20bbc918797fb967a87bb8449a055ac75cc.svg "Repobeats analytics image")
+![Alt](https://repobeats.axiom.co/api/embed/4a54d20bbc918797fb967a87bb8449a055ac75cc.svg 'Repobeats analytics image')

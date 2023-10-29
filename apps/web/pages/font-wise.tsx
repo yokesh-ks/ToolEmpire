@@ -1,7 +1,7 @@
-import { copy } from '@tool-empire/utils'
 import React, { useEffect, useState } from 'react'
 
 import { Button, Input, useToast } from '@tool-empire/components'
+import { copy } from '@tool-empire/utils'
 
 export default function Home() {
   const [maxScreenSize, setMaxScreenSize] = useState(1000)

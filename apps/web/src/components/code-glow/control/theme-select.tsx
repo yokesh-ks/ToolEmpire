@@ -1,5 +1,3 @@
-import { cn } from '@tool-empire/utils'
-
 import {
   Select,
   SelectContent,
@@ -7,6 +5,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@tool-empire/components'
+import { cn } from '@tool-empire/utils'
 
 import { themes } from '@/constants/code-theme'
 

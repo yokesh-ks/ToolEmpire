@@ -1,9 +1,9 @@
-import { cn } from '@tool-empire/utils'
 import * as React from 'react'
 
-import * as AccordionPrimitive from '@radix-ui/react-accordion'
+import { Icon } from '@tool-empire/icon'
+import { cn } from '@tool-empire/utils'
 
-import { Icon } from '@/icon'
+import * as AccordionPrimitive from '@radix-ui/react-accordion'
 
 const Accordion = AccordionPrimitive.Root
 

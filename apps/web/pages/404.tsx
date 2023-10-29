@@ -1,6 +1,5 @@
 import { Button, Card } from '@tool-empire/components'
-
-import { Icon } from '@/icon'
+import { Icon } from '@tool-empire/icon'
 
 export default function NotFound() {
   return (

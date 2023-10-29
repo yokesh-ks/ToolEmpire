@@ -1,14 +1,13 @@
 {
-  "name": "@tool-empire/utils",
+  "name": "@tool-empire/icon",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "index.tsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "clsx": "2.0.0",
-    "tailwind-merge": "1.14.0"
+    "lucide-react": "0.274.0"
   },
   "keywords": [],
   "author": "",

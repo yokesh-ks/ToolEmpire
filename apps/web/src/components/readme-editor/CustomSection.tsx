@@ -11,10 +11,9 @@ import {
 } from '@tool-empire/components'
 import { Input } from '@tool-empire/components'
 import { Label } from '@tool-empire/components'
+import { Icon } from '@tool-empire/icon'
 
 import useLocalStorage from '@/hooks/useLocalStorage'
-
-import { Icon } from '@/icon'
 
 const CustomSection = ({
   setTemplates,

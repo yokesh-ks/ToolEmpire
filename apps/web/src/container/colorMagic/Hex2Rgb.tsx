@@ -1,8 +1,8 @@
-import { copy } from '@tool-empire/utils'
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
 import { Input } from '@tool-empire/components'
+import { copy } from '@tool-empire/utils'
 
 const Hex2Rgb = () => {
   const [result, setResult] = useState('')

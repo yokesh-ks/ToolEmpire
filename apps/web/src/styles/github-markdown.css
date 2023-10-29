@@ -46,7 +46,7 @@
   }
 }
 
-[data-theme="light"] {
+[data-theme='light'] {
   .markdown-body {
     /*light*/
     color-scheme: light;

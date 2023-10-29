@@ -1,8 +1,9 @@
-import { Button } from '@tool-empire/components'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useRouter } from 'next/router'
 import React from 'react'
+
+import { Button } from '@tool-empire/components'
 
 import { ModeToggle } from './mode-toggle'
 

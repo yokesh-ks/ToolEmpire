@@ -1,10 +1,10 @@
-import { cn } from '@tool-empire/utils'
 import { cva } from 'class-variance-authority'
 import * as React from 'react'
 
-import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu'
+import { Icon } from '@tool-empire/icon'
+import { cn } from '@tool-empire/utils'
 
-import { Icon } from '@/icon'
+import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu'
 
 const NavigationMenu = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Root>,

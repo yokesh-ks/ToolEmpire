@@ -13,6 +13,7 @@ import {
   Trash2,
   X,
 } from 'lucide-react'
+import React from 'react'
 
 import Github from './assets/github'
 import Spinner from './assets/spinner'

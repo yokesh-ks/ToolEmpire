@@ -1,8 +1,9 @@
-import { cn } from '@tool-empire/utils'
 import flourite from 'flourite'
 import hljs from 'highlight.js'
 import { useEffect } from 'react'
 import Editor from 'react-simple-code-editor'
+
+import { cn } from '@tool-empire/utils'
 
 import { fonts } from '@/constants/code-fonts'
 import { codeSnippets } from '@/constants/codeSnippets'

@@ -1,5 +1,6 @@
-import { cn } from '@tool-empire/utils'
 import * as React from 'react'
+
+import { cn } from '@tool-empire/utils'
 
 import * as SwitchPrimitives from '@radix-ui/react-switch'
 

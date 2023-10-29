@@ -1,6 +1,7 @@
-import { cn } from '@tool-empire/utils'
 import { type VariantProps, cva } from 'class-variance-authority'
 import * as React from 'react'
+
+import { cn } from '@tool-empire/utils'
 
 import * as LabelPrimitive from '@radix-ui/react-label'
 

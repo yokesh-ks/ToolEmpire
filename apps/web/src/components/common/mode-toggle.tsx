@@ -10,8 +10,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@tool-empire/components'
-
-import { Icon } from '@/icon'
+import { Icon } from '@tool-empire/icon'
 
 export function ModeToggle() {
   const { setTheme } = useTheme()

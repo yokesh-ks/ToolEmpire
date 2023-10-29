@@ -1,9 +1,9 @@
-import { cn } from '@tool-empire/utils'
 import * as React from 'react'
 
-import * as DialogPrimitive from '@radix-ui/react-dialog'
+import { Icon } from '@tool-empire/icon'
+import { cn } from '@tool-empire/utils'
 
-import { Icon } from '@/icon'
+import * as DialogPrimitive from '@radix-ui/react-dialog'
 
 const Dialog = DialogPrimitive.Root
 

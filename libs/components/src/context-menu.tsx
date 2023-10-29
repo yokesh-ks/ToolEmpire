@@ -1,10 +1,9 @@
 import * as React from 'react'
 
-import * as ContextMenuPrimitive from '@radix-ui/react-context-menu'
-
+import { Icon } from '@tool-empire/icon'
 import { cn } from '@tool-empire/utils'
 
-import { Icon } from '@/icon'
+import * as ContextMenuPrimitive from '@radix-ui/react-context-menu'
 
 const ContextMenu = ContextMenuPrimitive.Root
 

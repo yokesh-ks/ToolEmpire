@@ -1,9 +1,9 @@
-import { cn } from '@tool-empire/utils'
 import * as React from 'react'
 
-import * as SelectPrimitive from '@radix-ui/react-select'
+import { Icon } from '@tool-empire/icon'
+import { cn } from '@tool-empire/utils'
 
-import { Icon } from '@/icon'
+import * as SelectPrimitive from '@radix-ui/react-select'
 
 const Select = SelectPrimitive.Root
 

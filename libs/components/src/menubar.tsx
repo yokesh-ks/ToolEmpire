@@ -1,9 +1,9 @@
-import { cn } from '@tool-empire/utils'
 import * as React from 'react'
 
-import * as MenubarPrimitive from '@radix-ui/react-menubar'
+import { Icon } from '@tool-empire/icon'
+import { cn } from '@tool-empire/utils'
 
-import { Icon } from '@/icon'
+import * as MenubarPrimitive from '@radix-ui/react-menubar'
 
 const MenubarMenu = MenubarPrimitive.Menu
 

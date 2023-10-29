@@ -11,6 +11,7 @@ module.exports = {
     'src/container/**/*.{ts,tsx}',
     'src/container/**/*.{js,jsx}',
     '../../libs/components/**/*.{ts,tsx}',
+    '../../libs/icon/**/*.{ts,tsx}',
   ],
   theme: {
     container: {

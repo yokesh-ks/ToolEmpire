@@ -1,4 +1,3 @@
-import { cn } from '@tool-empire/utils'
 import * as React from 'react'
 import {
   Controller,
@@ -10,6 +9,7 @@ import {
 } from 'react-hook-form'
 
 import { Label } from '@tool-empire/components'
+import { cn } from '@tool-empire/utils'
 
 import * as LabelPrimitive from '@radix-ui/react-label'
 import { Slot } from '@radix-ui/react-slot'
