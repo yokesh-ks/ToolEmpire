@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button'
+import { Button } from '@tool-empire/components'
 
 import useStore from '@/store/store'
 

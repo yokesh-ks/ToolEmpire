@@ -1,9 +1,9 @@
+import { Button } from '@tool-empire/components'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useRouter } from 'next/router'
 import React from 'react'
 
-import { Button } from '../ui/button'
 import { ModeToggle } from './mode-toggle'
 
 export const Header = () => {

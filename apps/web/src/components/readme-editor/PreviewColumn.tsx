@@ -1,9 +1,15 @@
 import { useTheme } from 'next-themes'
 import ReactMarkdown from 'react-markdown'
 
+import { Card } from '@tool-empire/components'
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from '@tool-empire/components'
+
 import '../../styles/github-markdown.css'
-import { Card } from '../ui/card'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs'
 import RawPreview from './RawPreview'
 
 export const PreviewColumn = ({ selectedSectionSlugs, getTemplate }) => {

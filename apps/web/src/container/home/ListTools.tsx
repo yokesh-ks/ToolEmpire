@@ -1,7 +1,11 @@
 import { Container } from '@uimakers/tools-ui'
 
-import { Button } from '@/components/ui/button'
-import { Card, CardDescription, CardTitle } from '@/components/ui/card'
+import {
+  Button,
+  Card,
+  CardDescription,
+  CardTitle,
+} from '@tool-empire/components'
 
 const ListTools = (props) => {
   const { data } = props

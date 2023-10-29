@@ -1,6 +1,6 @@
 import useStore from '@/store/store'
 
-import { Switch } from '../../ui/switch'
+import { Switch } from '@tool-empire/components'
 
 export default function BackgroundSwitch() {
   const showBg = useStore((state) => state.showBackground)

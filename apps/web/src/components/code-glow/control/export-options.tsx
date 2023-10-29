@@ -1,9 +1,9 @@
 import { toPng } from 'html-to-image'
 import { toast } from 'react-hot-toast'
 
-import useStore from '@/store/store'
+import { Button } from '@tool-empire/components'
 
-import { Button } from '../../ui/button'
+import useStore from '@/store/store'
 
 export default function ExportOptions({ targetRef }) {
   const title = useStore((state) => state.title)

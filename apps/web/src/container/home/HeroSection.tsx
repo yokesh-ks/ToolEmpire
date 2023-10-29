@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button'
+import { Button } from '@tool-empire/components'
 
 export const Hero = (props) => {
   const { buttonLabel, description, handleButtonCLick, title } = props

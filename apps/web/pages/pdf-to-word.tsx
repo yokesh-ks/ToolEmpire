@@ -4,7 +4,7 @@ import PDFParser from 'pdf-parser'
 import React, { useCallback, useEffect, useState } from 'react'
 import styled from 'styled-components'
 
-import { Button } from '@/components/ui/button'
+import { Button } from '@tool-empire/components'
 
 import { pdfListData } from '../src/constants'
 

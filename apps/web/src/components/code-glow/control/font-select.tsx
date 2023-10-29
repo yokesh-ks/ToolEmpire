@@ -1,14 +1,14 @@
-import { fonts } from '@/constants/code-fonts'
-
-import useStore from '@/store/store'
-
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '../../ui/select'
+} from '@tool-empire/components'
+
+import { fonts } from '@/constants/code-fonts'
+
+import useStore from '@/store/store'
 
 export default function FontSelect() {
   const fontStyle = useStore((state) => state.fontStyle)

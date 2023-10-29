@@ -1,4 +1,4 @@
-import { Card } from '@/components/ui/card'
+import { Card } from '@tool-empire/components'
 
 import BackgroundSwitch from './background-switch'
 import DarkModeSwitch from './dark-mode-switch'

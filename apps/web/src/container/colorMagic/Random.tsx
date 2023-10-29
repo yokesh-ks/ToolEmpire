@@ -2,8 +2,7 @@ import { copy } from '@tool-empire/utils'
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
+import { Button, Input } from '@tool-empire/components'
 
 const Random = () => {
   const [result, setResult] = useState('#FFC700')

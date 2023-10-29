@@ -10,6 +10,7 @@ module.exports = {
     'src/components/**/*.{js,jsx}',
     'src/container/**/*.{ts,tsx}',
     'src/container/**/*.{js,jsx}',
+    '../../libs/components/**/*.{ts,tsx}',
   ],
   theme: {
     container: {

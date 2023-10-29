@@ -1,13 +1,12 @@
+import { copy } from '@tool-empire/utils'
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
-import { Input } from '@/components/ui/input'
-
-import { copy } from '@tool-empire/utils'
+import { Input } from '@tool-empire/components'
 
 const Hex2Rgb = () => {
   const [result, setResult] = useState('')
-  const [value, setValue] = useState('#FF5E5E')
+  const [value, setValue] = useState('#dc7272')
 
   useEffect(() => {
     // Remove the "#" symbol from the hex code

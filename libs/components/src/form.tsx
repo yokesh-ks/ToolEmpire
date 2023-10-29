@@ -9,7 +9,7 @@ import {
   useFormContext,
 } from 'react-hook-form'
 
-import { Label } from '@/components/ui/label'
+import { Label } from '@tool-empire/components'
 
 import * as LabelPrimitive from '@radix-ui/react-label'
 import { Slot } from '@radix-ui/react-slot'

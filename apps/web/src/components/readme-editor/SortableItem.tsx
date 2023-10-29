@@ -1,9 +1,9 @@
 import { useSortable } from '@dnd-kit/sortable'
 import { CSS } from '@dnd-kit/utilities'
 
-import { Icon } from '@/icon'
+import { Card } from '@tool-empire/components'
 
-import { Card } from '../ui/card'
+import { Icon } from '@/icon'
 
 export function SortableItem(props) {
   const { attributes, listeners, setNodeRef, transform, transition } =

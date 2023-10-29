@@ -1,10 +1,9 @@
 import { cn } from '@tool-empire/utils'
 import React from 'react'
 
+import { Input, Textarea, buttonVariants } from '@tool-empire/components'
+
 import { Header } from '@/components/common/Header'
-import { buttonVariants } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
 
 import { Icon } from '@/icon'
 

@@ -2,7 +2,7 @@ import { cn } from '@tool-empire/utils'
 import { Command as CommandPrimitive } from 'cmdk'
 import * as React from 'react'
 
-import { Dialog, DialogContent } from '@/components/ui/dialog'
+import { Dialog, DialogContent } from '@tool-empire/components'
 
 import { DialogProps } from '@radix-ui/react-dialog'
 

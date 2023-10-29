@@ -1,9 +1,8 @@
+import { copy } from '@tool-empire/utils'
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
-import { Input } from '@/components/ui/input'
-
-import { copy } from '@tool-empire/utils'
+import { Input } from '@tool-empire/components'
 
 const Hex2Rgba = () => {
   const [result, setResult] = useState('')

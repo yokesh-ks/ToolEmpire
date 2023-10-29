@@ -1,6 +1,6 @@
-import useStore from '@/store/store'
+import { Switch } from '@tool-empire/components'
 
-import { Switch } from '../../ui/switch'
+import useStore from '@/store/store'
 
 export default function DarkModeSwitch() {
   const darkMode = useStore((state) => state.darkMode)

@@ -5,10 +5,9 @@ import React, { useState } from 'react'
 import { FileUploader } from 'react-drag-drop-files'
 import xmljs from 'xml-js'
 
+import { Badge, Button, useToast } from '@tool-empire/components'
+
 import CodeEditorWindow from '@/components/json-formatter/CodeEditorWindow'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { useToast } from '@/components/ui/use-toast'
 
 const fileTypes = ['json']
 

@@ -3,11 +3,12 @@ import Head from 'next/head'
 import { Resizable } from 're-resizable'
 import { useEffect, useRef, useState } from 'react'
 
+import { Button } from '@tool-empire/components'
+
 import CodeEditor from '@/components/code-glow/code-editor'
 import { Control } from '@/components/code-glow/control'
 // import { ResetIcon } from "@radix-ui/react-icons";
 import WidthMeasurement from '@/components/code-glow/width-measurement'
-import { Button } from '@/components/ui/button'
 
 import { fonts } from '@/constants/code-fonts'
 import { themes } from '@/constants/code-theme'

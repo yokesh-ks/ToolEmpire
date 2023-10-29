@@ -1,16 +1,16 @@
 import { cn } from '@tool-empire/utils'
 
-import { themes } from '@/constants/code-theme'
-
-import useStore from '@/store/store'
-
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '../../ui/select'
+} from '@tool-empire/components'
+
+import { themes } from '@/constants/code-theme'
+
+import useStore from '@/store/store'
 
 export default function ThemeSelect() {
   const theme = useStore((state) => state.theme)

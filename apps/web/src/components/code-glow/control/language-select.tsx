@@ -1,14 +1,14 @@
-import { languages } from '@/constants/code-language'
-
-import useStore from '@/store/store'
-
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '../../ui/select'
+} from '@tool-empire/components'
+
+import { languages } from '@/constants/code-language'
+
+import useStore from '@/store/store'
 
 // import { MagicWandIcon } from "@radix-ui/react-icons";
 

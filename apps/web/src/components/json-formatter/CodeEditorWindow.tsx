@@ -2,7 +2,7 @@ import Editor from '@monaco-editor/react'
 import { useTheme } from 'next-themes'
 import React, { useEffect, useState } from 'react'
 
-import { Card } from '../ui/card'
+import { Card } from '@tool-empire/components'
 
 const options = {
   minimap: { enabled: false },

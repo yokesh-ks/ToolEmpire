@@ -1,7 +1,7 @@
 import { cn } from '@tool-empire/utils'
 import * as React from 'react'
 
-import { buttonVariants } from '@/components/ui/button'
+import { buttonVariants } from '@tool-empire/components'
 
 import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog'
 

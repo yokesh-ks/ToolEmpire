@@ -1,7 +1,8 @@
 import { useTheme } from 'next-themes'
 
-import { Card } from '../ui/card'
-import { Tabs, TabsList, TabsTrigger } from '../ui/tabs'
+import { Card } from '@tool-empire/components'
+import { Tabs, TabsList, TabsTrigger } from '@tool-empire/components'
+
 import { EditorColumn } from './EditorColumn'
 import { PreviewColumn } from './PreviewColumn'
 

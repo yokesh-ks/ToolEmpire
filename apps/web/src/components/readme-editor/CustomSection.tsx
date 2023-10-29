@@ -1,10 +1,6 @@
 import { Fragment, useRef, useState } from 'react'
 
-import useLocalStorage from '@/hooks/useLocalStorage'
-
-import { Icon } from '@/icon'
-
-import { Button } from '../ui/button'
+import { Button } from '@tool-empire/components'
 import {
   Dialog,
   DialogContent,
@@ -12,9 +8,13 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '../ui/dialog'
-import { Input } from '../ui/input'
-import { Label } from '../ui/label'
+} from '@tool-empire/components'
+import { Input } from '@tool-empire/components'
+import { Label } from '@tool-empire/components'
+
+import useLocalStorage from '@/hooks/useLocalStorage'
+
+import { Icon } from '@/icon'
 
 const CustomSection = ({
   setTemplates,

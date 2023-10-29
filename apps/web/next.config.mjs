@@ -7,7 +7,7 @@ const nextConfig = {
   output: 'standalone',
   reactStrictMode: true,
   swcMinify: true,
-  transpilePackages: ['@tool-empire/utils'],
+  transpilePackages: ['@tool-empire/utils', '@tool-empire/components'],
   images: {
     domains: ['lh3.googleusercontent.com', 'vercel.com'],
   },

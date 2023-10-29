@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
-import { Input } from '@/components/ui/input'
+import { Input } from '@tool-empire/components'
 
 const Rgba2Hex = () => {
   const [result, setResult] = useState('')

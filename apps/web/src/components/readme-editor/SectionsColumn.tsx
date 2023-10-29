@@ -15,13 +15,14 @@ import {
 } from '@dnd-kit/sortable'
 import { useEffect, useState } from 'react'
 
+import { Card } from '@tool-empire/components'
+import { Input } from '@tool-empire/components'
+import { Tabs, TabsList, TabsTrigger } from '@tool-empire/components'
+
 import useLocalStorage from '@/hooks/useLocalStorage'
 
 import { Icon } from '@/icon'
 
-import { Card } from '../ui/card'
-import { Input } from '../ui/input'
-import { Tabs, TabsList, TabsTrigger } from '../ui/tabs'
 import CustomSection from './CustomSection'
 import { SortableItem } from './SortableItem'
 
